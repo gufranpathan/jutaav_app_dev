@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">JUTAAV</string>
+
+    <string name="msg_NO_INTERNET_RESPOND">Please connect the device with internet</string>
+    <string name="msg_NO_INTERNET_TITLE">Connection error</string>
+    <string name="msg_NO_INTERNET_MSG">We can\’t reach our network right now. Please check your connection.</string>
+    <string name="label_close">Close</string>
+    <string name="msg_goto_settings">CONNECTION SETTINGS</string>
+    <string name="msg_please_wait">Please wait …</string>
+    <string name="msg_update_image">Uploading images</string>
+    <string name="msg_update_status">Update status</string>
+    <string name="msg_speed_check">Checking internet speed</string>
+    <string name="msg_server_error">Something went wrong please try again</string>
+    <string name="msg_unauthorise_error">Unauthorised Access!</string>
+
+    <string name="noNetworkFound">"You're not connected to the Internet. Please connect and retry." </string>
+    <string name="dialog_ok_btn">OK</string>
+
+    <string name="loginlabel1">Sign in/Register</string>
+    <string name="loginlabel2">Please enter your mobile number \nto proceed</string>
+    <string name="loginlabel3">Mobile Number</string>
+    <string name="loginlabel4">Proceed</string>
+    <string name="loginlabel5">+91-</string>
+    <string name="loginlabel6">Sign In another way <font fgcolor='#2E5BFF'>via email</font></string>
+    <string name="loginlabel7">Please enter your credentials to\n proceed</string>
+    <string name="loginlabel8">EMAIL ID</string>
+    <string name="loginlabel9">Sign In another way <font fgcolor='#2E5BFF'>via OTP</font></string>
+    <string name="loginlabel10">john@smith.com</string>
+    <string name="loginlabel11">Password</string>
+    <string name="loginlabel12">xxxxxx</string>
+
+    <string name="error_login1">Please enter mobile number</string>
+
+    <string name="otplabel1">Please enter your OTP to \nproceed</string>
+    <string name="otplabel2">ONE TIME PASSWORD (OTP)</string>
+    <string name="error_otp1">Please enter otp</string>
+
+    <string name="signup_orgazinattion1">Please enter your organisation \nname or code to proceed</string>
+    <string name="signup_orgazinattion2">ORGANSIATION NAME</string>
+    <string name="signup_orgazinattion3">Enter Organisation Name Here</string>
+    <string name="signup_orgazinattion4">ORGANISATION CODE</string>
+    <string name="signup_orgazinattion5">OR</string>
+    <string name="signup_orgazinattion6">Please tell us how we can address you</string>
+    <string name="signup_orgazinattion7">Name</string>
+
+    <string name="workspace_load_label1">Setting up your workspace for you</string>
+    <string name="workspace_load_label2">Logging you into your default workplace. You can always change it from your profile settings</string>
+
+    <string name="error_org1">Please enter organization name or code</string>
+
+    <string name="choose_lan_label1">SELECT YOUR PREFERRED LANGUAGE</string>
+    <string name="choose_lan_label2">English</string>
+    <string name="choose_lan_label3">Hindi</string>
+    <string name="choose_lan_label4">En</string>
+    <string name="choose_lan_label5">हिंदी</string>
+
+</resources>

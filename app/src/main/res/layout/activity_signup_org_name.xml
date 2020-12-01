@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity"
+    android:background="@color/color_ffffff">
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_txt"
+        android:layout_marginTop="30dip"
+        >
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/color_2E384D"
+            android:text="@string/signup_orgazinattion6">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="@string/signup_orgazinattion1"
+            android:visibility="invisible"
+            android:textColor="@color/color_8798AD"
+            android:textSize="15sp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+
+            android:textAllCaps="true"
+            android:layout_marginTop="10dip"
+            android:text="@string/signup_orgazinattion7">
+
+        </TextView>
+        <EditText
+            android:id="@+id/et_org_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginTop="10dip"
+            android:imeOptions="actionDone"
+            android:paddingLeft="10dip"
+            android:maxLines="1"
+            android:hint="@string/signup_orgazinattion3"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="text">
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:visibility="invisible"
+            android:text="@string/signup_orgazinattion5">
+
+        </TextView>
+
+
+
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/rounded_login_btn"
+            android:text="@string/loginlabel4"
+            android:textColor="@color/color_ffffff"
+            android:layout_marginTop="15dip">
+
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity"
+    android:background="@color/color_ffffff">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_txt"
+        android:layout_marginTop="30dip"
+        >
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/color_2E384D"
+            android:text="@string/loginlabel1">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dip"
+            android:textColor="@color/color_8798AD"
+            android:text="@string/loginlabel7">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dip"
+            android:text="@string/loginlabel8">
+
+        </TextView>
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginTop="10dip"
+            android:imeOptions="actionDone"
+            android:paddingLeft="10dip"
+            android:maxLines="1"
+            android:hint="@string/loginlabel10"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="textEmailAddress">
+
+        </EditText>
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/rounded_login_btn"
+            android:text="@string/loginlabel4"
+            android:textColor="@color/color_ffffff"
+            android:layout_marginTop="15dip">
+
+        </Button>
+        <TextView
+            android:id="@+id/tv_loginwithmobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dip"
+            android:textColor="@color/color_8798AD"
+            android:text="@string/loginlabel9">
+
+        </TextView>
+    </LinearLayout>
+</RelativeLayout>
