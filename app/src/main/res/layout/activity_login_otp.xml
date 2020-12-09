@@ -1,92 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity"
-    android:background="@color/color_ffffff">
+    android:background="@color/color_ffffff"
+    tools:context=".login.LoginActivity">
+
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="9dp"
         android:src="@drawable/splash_txt"
-        android:layout_marginTop="30dip"
-        >
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:layout_centerInParent="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="@color/color_2E384D"
-            android:text="@string/loginlabel1">
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/loginlabel1"
+        android:textColor="@color/color_2E384D"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:layout_marginTop="10dip"
-            android:textColor="@color/color_8798AD"
-            android:text="@string/otplabel1">
+    </TextView>
 
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textAllCaps="true"
-            android:layout_marginTop="10dip"
-            android:text="@string/otplabel2">
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/otplabel1"
+        android:textColor="@color/color_8798AD"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
 
-        </TextView>
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/otplabel2"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/otp_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+    </TextView>
 
 
-        <in.aabhasjindal.otptextview.OtpTextView
-            android:id="@+id/otp_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:height="40dp"
-            app:width="40dp"
-            app:bar_enabled="false"
-            app:bar_height="2dp"
-            app:length="6"
-            app:otp_box_background="@drawable/rounded_edittext"
-            app:otp_text_size="24dp"/>
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        app:bar_enabled="false"
+        app:bar_height="2dp"
+        app:height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_proceed"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:length="6"
+        app:otp_box_background="@drawable/rounded_edittext"
+        app:otp_text_size="24dp"
+        app:width="40dp" />
 
-        <Button
-            android:id="@+id/btn_proceed"
-            android:layout_width="match_parent"
-            android:layout_height="50dip"
-            android:background="@drawable/rounded_login_btn"
-            android:text="@string/loginlabel4"
-            android:textColor="@color/color_ffffff"
-            android:layout_marginTop="15dip">
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_login_btn"
+        android:text="@string/loginlabel4"
+        android:textColor="@color/color_ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/tv_loginwithemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_view">
 
-        </Button>
-        <TextView
-            android:id="@+id/tv_loginwithemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:layout_marginTop="10dip"
-            android:textColor="@color/color_8798AD"
-            android:text="@string/loginlabel6">
+    </Button>
 
-        </TextView>
-    </LinearLayout>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/tv_loginwithemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="237dp"
+        android:gravity="center"
+        android:text="@string/loginlabel6"
+        android:textColor="@color/color_8798AD"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_proceed">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
