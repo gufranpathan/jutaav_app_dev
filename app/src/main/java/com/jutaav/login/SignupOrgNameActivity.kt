@@ -1,43 +1,31 @@
 package com.jutaav.login
 
-import `in`.aabhasjindal.otptextview.OTPListener
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
-import androidx.core.view.isEmpty
 import com.jutaav.R
 import com.jutaav.activity.WSLoadingActivity
 import com.jutaav.base.BaseActivity
+import com.jutaav.databinding.ActivitySignupOrgNameBinding
+import com.jutaav.extensions.showShortToast
+import com.wada811.viewbinding.viewBinding
 
-import kotlinx.android.synthetic.main.activity_login.btn_proceed
-import kotlinx.android.synthetic.main.activity_login_otp.*
-import kotlinx.android.synthetic.main.activity_signup_organization.*
-
-
-class SignupOrgNameActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup_org_name)
-        init()
+class SignupOrgNameActivity : BaseActivity<ActivitySignupOrgNameBinding>() {
+    override val binding: ActivitySignupOrgNameBinding by viewBinding {
+        ActivitySignupOrgNameBinding.inflate(layoutInflater)
     }
-    private fun init() {
-        try {
 
-            supportActionBar?.hide();
-            btn_proceed.setOnClickListener { checkvalidation() }
+    override fun oViewInitialized() {
+        try {
+            supportActionBar?.hide()
+            binding.btnProceed.setOnClickListener { checkValidation() }
         } catch (e: Exception) {
         }
     }
 
-    private fun checkvalidation()
-    {
+    private fun checkValidation() {
         try {
-            if(et_org_name.text.toString().trim().isEmpty())
-            {
-                showToast(getString(R.string.error_org1))
-            }
-            else
-            {
+            if (binding.etOrgName.text.toString().trim().isEmpty()) {
+                showShortToast(getString(R.string.error_org1))
+            } else {
                 val intent = Intent(this@SignupOrgNameActivity, WSLoadingActivity::class.java)
                 startActivity(intent)
             }

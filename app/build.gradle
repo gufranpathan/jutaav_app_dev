@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
@@ -15,10 +14,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -39,5 +44,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.7'
     implementation 'com.github.aliwaris0572:GifDialog:0.0.1'
     implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx' // kotlin
+
+    implementation 'com.github.wada811:ViewBinding-ktx:1.1.1'
 
 }

@@ -1,30 +1,18 @@
 package com.jutaav.base
 
-import android.app.Dialog
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 
-import com.jutaav.R
+abstract class BaseActivity<BINDING : ViewBinding> : AppCompatActivity() {
 
-open class BaseActivity : AppCompatActivity() {
-    var dialog: Dialog? = null
+    protected abstract val binding: BINDING
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dialog = Dialog(this)
+        setContentView(binding.root)
+        oViewInitialized()
     }
 
-    fun showProgress() {
-        dialog!!.setContentView(R.layout.loading)
-        dialog!!.window!!.setBackgroundDrawableResource(android.R.color.transparent)
-        dialog!!.show()
-    }
-
-    fun hideProgress() {
-        dialog!!.dismiss()
-    }
-    fun showToast(error: String?) {
-        Toast.makeText(this, error, Toast.LENGTH_LONG).show()
-    }
+    abstract fun oViewInitialized()
 }

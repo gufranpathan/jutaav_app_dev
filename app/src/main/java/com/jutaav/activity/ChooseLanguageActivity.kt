@@ -1,18 +1,16 @@
 package com.jutaav.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jutaav.R
 import com.jutaav.base.BaseActivity
+import com.jutaav.databinding.ActivityChooseLanguageBinding
+import com.wada811.viewbinding.viewBinding
 
-class ChooseLanguageActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_language)
-        init()
+class ChooseLanguageActivity : BaseActivity<ActivityChooseLanguageBinding>() {
+
+    override val binding: ActivityChooseLanguageBinding by viewBinding {
+        ActivityChooseLanguageBinding.inflate(layoutInflater)
     }
 
-    private fun init() {
+    override fun oViewInitialized() {
         try {
 
         } catch (e: Exception) {

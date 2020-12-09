@@ -1,18 +1,16 @@
 package com.jutaav.home
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jutaav.R
 import com.jutaav.base.BaseActivity
+import com.jutaav.databinding.ActivityHomeBinding
+import com.wada811.viewbinding.viewBinding
 
-class HomeActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        init()
+class HomeActivity : BaseActivity<ActivityHomeBinding>() {
+
+    override val binding: ActivityHomeBinding by viewBinding {
+        ActivityHomeBinding.inflate(layoutInflater)
     }
 
-    private fun init() {
+    override fun oViewInitialized() {
         try {
             supportActionBar?.hide()
         } catch (e: Exception) {

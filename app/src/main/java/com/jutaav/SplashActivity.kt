@@ -1,30 +1,30 @@
 package com.jutaav
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.Handler
 import com.jutaav.base.BaseActivity
-import com.jutaav.config.CommonFunctions
-import com.jutaav.config.Constants
+import com.jutaav.databinding.ActivitySplashBinding
+import com.jutaav.extensions.getPreference
 import com.jutaav.home.HomeActivity
 import com.jutaav.login.LoginActivity
+import com.jutaav.login.PREFS_NAME_LOGIN
+import com.jutaav.login.PREF_KEY_IS_LOGIN
+import com.wada811.viewbinding.viewBinding
 
+const val SPLASH_TIME_OUT: Long = 1000
 
-class SplashActivity : BaseActivity() {
-    val SPLASH_TIME_OUT :Long= 1000
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-        init();
+class SplashActivity : BaseActivity<ActivitySplashBinding>() {
+    override val binding: ActivitySplashBinding by viewBinding {
+        ActivitySplashBinding.inflate(layoutInflater)
     }
 
-    private fun init() {
+    override fun oViewInitialized() {
         try {
-                supportActionBar?.hide();
-            Handler().postDelayed(Runnable {
-                if (CommonFunctions.getPreference(this@SplashActivity, Constants.isLogin, false)) {
-                        val intent = Intent(this@SplashActivity, HomeActivity::class.java)
-                        startActivity(intent)
+            supportActionBar?.hide()
+            Handler().postDelayed({
+                if (getPreference(PREFS_NAME_LOGIN).getBoolean(PREF_KEY_IS_LOGIN, false)) {
+                    val intent = Intent(this@SplashActivity, HomeActivity::class.java)
+                    startActivity(intent)
                     finish()
                 } else {
                     val intent = Intent(this@SplashActivity, LoginActivity::class.java)

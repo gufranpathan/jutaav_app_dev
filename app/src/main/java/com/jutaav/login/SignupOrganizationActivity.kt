@@ -1,43 +1,39 @@
 package com.jutaav.login
 
-import `in`.aabhasjindal.otptextview.OTPListener
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
-import androidx.core.view.isEmpty
 import com.jutaav.R
 import com.jutaav.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_signup_organization.*
+import com.jutaav.databinding.ActivitySignupOrganizationBinding
+import com.jutaav.extensions.showShortToast
+import com.wada811.viewbinding.viewBinding
 
-
-class SignupOrganizationActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup_organization)
-        init()
+class SignupOrganizationActivity : BaseActivity<ActivitySignupOrganizationBinding>() {
+    override val binding: ActivitySignupOrganizationBinding by viewBinding {
+        ActivitySignupOrganizationBinding.inflate(layoutInflater)
     }
-    private fun init() {
+
+    override fun oViewInitialized() {
         try {
-            supportActionBar?.hide();
-            btn_proceed.setOnClickListener { checkvalidation() }
+            supportActionBar?.hide()
+            binding.btnProceed.setOnClickListener { checkValidation() }
         } catch (e: Exception) {
         }
     }
 
-    private fun checkvalidation() {
+    private fun checkValidation() {
         try {
-                if(et_org_name.text.toString().isEmpty() || otp_view.otp.toString().isEmpty())
-                {
-                    showToast(getString(R.string.error_org1))
+            if (binding.etOrgName.text.toString().isEmpty() ||
+                binding.otpView.otp.toString().isEmpty()
+            ) {
+                showShortToast(getString(R.string.error_org1))
+            } else {
+                try {
+                    val intent =
+                        Intent(this@SignupOrganizationActivity, SignupOrgNameActivity::class.java)
+                    startActivity(intent)
+                } catch (e: Exception) {
                 }
-                else
-                {
-                    try {
-                        val intent = Intent(this@SignupOrganizationActivity, SignupOrgNameActivity::class.java)
-                        startActivity(intent)
-                    } catch (e: Exception) {
-                    }
-                }
+            }
         } catch (e: Exception) {
         }
     }

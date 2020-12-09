@@ -1,39 +1,20 @@
 package com.jutaav.base
 
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 
-import com.jutaav.R
-
-open class BaseFragment : Fragment() {
-    var dialog: Dialog? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        dialog = activity?.let { Dialog(it) }
-    }
+abstract class BaseFragment<BINDING : ViewBinding> : Fragment() {
+    abstract val binding: BINDING
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
-
-    fun showProgress() {
-        dialog!!.setContentView(R.layout.loading)
-        dialog!!.window!!.setBackgroundDrawableResource(android.R.color.transparent)
-        dialog!!.show()
-    }
-
-    fun hideProgress() {
-        dialog!!.dismiss()
-    }
-
 }

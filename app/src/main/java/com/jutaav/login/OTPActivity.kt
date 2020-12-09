@@ -1,46 +1,37 @@
 package com.jutaav.login
 
-import `in`.aabhasjindal.otptextview.OTPListener
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
-import androidx.core.view.isEmpty
 import com.jutaav.R
 import com.jutaav.base.BaseActivity
+import com.jutaav.databinding.ActivityLoginOtpBinding
+import com.jutaav.extensions.showShortToast
+import com.wada811.viewbinding.viewBinding
 
-import kotlinx.android.synthetic.main.activity_login.btn_proceed
-import kotlinx.android.synthetic.main.activity_login_otp.*
-
-
-class OTPActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_otp)
-        init()
+class OTPActivity : BaseActivity<ActivityLoginOtpBinding>() {
+    override val binding: ActivityLoginOtpBinding by viewBinding {
+        ActivityLoginOtpBinding.inflate(layoutInflater)
     }
-    private fun init() {
+
+    override fun oViewInitialized() {
         try {
-            supportActionBar?.hide();
-            btn_proceed.setOnClickListener { checkvalidation() }
-            tv_loginwithemail.setOnClickListener {
-               try {
-                   val intent = Intent(this@OTPActivity, LoginEmailActivity::class.java)
-                   startActivity(intent)
-               } catch (e: Exception) {
-               }
+            supportActionBar?.hide()
+            binding.btnProceed.setOnClickListener { checkValidation() }
+            binding.tvLoginwithemail.setOnClickListener {
+                try {
+                    val intent = Intent(this@OTPActivity, LoginEmailActivity::class.java)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                }
             }
         } catch (e: Exception) {
         }
     }
 
-    private fun checkvalidation() {
+    private fun checkValidation() {
         try {
-            if(otp_view?.otp?.isEmpty() == true)
-            {
-                showToast(getString(R.string.error_otp1))
-            }
-            else
-            {
+            if (binding.otpView.otp?.isEmpty() == true) {
+                showShortToast(getString(R.string.error_otp1))
+            } else {
                 val intent = Intent(this@OTPActivity, SignupOrganizationActivity::class.java)
                 startActivity(intent)
             }
