@@ -1,4 +1,4 @@
-package com.jutaav.extensions
+package com.jutaav.baseandroid.extensions
 
 import android.app.Activity
 import android.graphics.Color
@@ -6,9 +6,8 @@ import com.nispok.snackbar.Snackbar
 import kotlin.math.roundToInt
 
 /**
- * Created by viking_93 on 07/12/2020
+ * Created by viking_93 on 10/12/2020
  **/
-
 fun Activity.showSnackBar(message: String) {
     Snackbar.with(this)
         .text(message)

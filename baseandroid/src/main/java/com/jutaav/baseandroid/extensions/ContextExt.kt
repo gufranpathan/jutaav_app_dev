@@ -1,27 +1,22 @@
-package com.jutaav.extensions
+package com.jutaav.baseandroid.extensions
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
-import android.net.ConnectivityManager.TYPE_MOBILE
-import android.net.ConnectivityManager.TYPE_WIFI
 import android.net.wifi.WifiManager
 import android.widget.Toast
-import android.widget.Toast.LENGTH_LONG
-import android.widget.Toast.LENGTH_SHORT
 import androidx.core.content.ContextCompat
 
 
 /**
- * Created by viking_93 on 07/12/2020
+ * Created by viking_93 on 10/12/2020
  **/
-
 fun Context.showShortToast(message: String) {
-    Toast.makeText(this, message, LENGTH_SHORT).show()
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
 fun Context.showLongToast(message: String) {
-    Toast.makeText(this, message, LENGTH_LONG).show()
+    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 }
 
 fun Context.getIpAddress(): String {
@@ -44,12 +39,12 @@ fun Context.isConnectedToNetwork(): Boolean {
 fun Context.isNetworkAvailable(): Boolean {
     val connec = getSystemService<ConnectivityManager>()
     // ARE WE CONNECTED TO THE NET
-    if (connec.getNetworkInfo(TYPE_MOBILE)?.state == android.net.NetworkInfo.State.CONNECTED ||
-        connec.getNetworkInfo(TYPE_WIFI)?.state == android.net.NetworkInfo.State.CONNECTING
+    if (connec.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)?.state == android.net.NetworkInfo.State.CONNECTED ||
+        connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI)?.state == android.net.NetworkInfo.State.CONNECTING
     ) {
         return true
-    } else if (connec.getNetworkInfo(TYPE_MOBILE)?.state == android.net.NetworkInfo.State.DISCONNECTED ||
-        connec.getNetworkInfo(TYPE_WIFI)?.state == android.net.NetworkInfo.State.DISCONNECTED
+    } else if (connec.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)?.state == android.net.NetworkInfo.State.DISCONNECTED ||
+        connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI)?.state == android.net.NetworkInfo.State.DISCONNECTED
     ) {
         return false
     }

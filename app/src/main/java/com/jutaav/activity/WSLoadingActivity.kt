@@ -5,7 +5,7 @@ import android.os.Handler
 import androidx.core.content.ContextCompat
 import com.hussain_chachuliya.gifdialog.GifDialog
 import com.jutaav.R
-import com.jutaav.base.BaseActivity
+import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityWSLoadingBinding
 import com.jutaav.home.HomeActivity
 import com.wada811.viewbinding.viewBinding

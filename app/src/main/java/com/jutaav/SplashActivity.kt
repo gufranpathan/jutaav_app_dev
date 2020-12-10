@@ -2,9 +2,9 @@ package com.jutaav
 
 import android.content.Intent
 import android.os.Handler
-import com.jutaav.base.BaseActivity
+import com.jutaav.baseandroid.BaseActivity
+import com.jutaav.baseandroid.extensions.getPreference
 import com.jutaav.databinding.ActivitySplashBinding
-import com.jutaav.extensions.getPreference
 import com.jutaav.home.HomeActivity
 import com.jutaav.login.LoginActivity
 import com.jutaav.login.PREFS_NAME_LOGIN

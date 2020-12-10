@@ -1,11 +1,15 @@
-package com.jutaav.base
+package com.jutaav.baseandroid
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.jutaav.base.extensions.tag
+
+/**
+ * Created by viking_93 on 10/12/2020
+ **/
 
 abstract class BaseActivity<BINDING : ViewBinding> : AppCompatActivity() {
-
     protected abstract val binding: BINDING
 
     override fun onCreate(savedInstanceState: Bundle?) {

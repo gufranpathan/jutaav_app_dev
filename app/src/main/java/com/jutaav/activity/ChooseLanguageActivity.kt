@@ -1,6 +1,6 @@
 package com.jutaav.activity
 
-import com.jutaav.base.BaseActivity
+import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityChooseLanguageBinding
 import com.wada811.viewbinding.viewBinding
 

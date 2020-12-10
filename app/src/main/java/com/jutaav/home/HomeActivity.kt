@@ -1,6 +1,6 @@
 package com.jutaav.home
 
-import com.jutaav.base.BaseActivity
+import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityHomeBinding
 import com.wada811.viewbinding.viewBinding
 
