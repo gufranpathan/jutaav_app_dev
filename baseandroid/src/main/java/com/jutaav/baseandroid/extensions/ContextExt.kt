@@ -1,6 +1,7 @@
 package com.jutaav.baseandroid.extensions
 
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.wifi.WifiManager
@@ -69,5 +70,5 @@ fun Context.getApplicationVersion(): String {
 }
 
 fun Context.getPreference(prefName: String): SharedPreferences {
-    return getPreference(prefName)
+    return this.getSharedPreferences(prefName, MODE_PRIVATE)
 }

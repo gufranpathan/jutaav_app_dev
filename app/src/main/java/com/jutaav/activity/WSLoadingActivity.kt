@@ -1,38 +1,37 @@
 package com.jutaav.activity
 
 import android.content.Intent
-import android.os.Handler
-import androidx.core.content.ContextCompat
-import com.hussain_chachuliya.gifdialog.GifDialog
 import com.jutaav.R
+import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityWSLoadingBinding
 import com.jutaav.home.HomeActivity
 import com.wada811.viewbinding.viewBinding
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Single
+import timber.log.Timber
+import java.util.concurrent.TimeUnit
 
-class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>() {
-    lateinit var dialog1: GifDialog
+class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activity_w_s_loading) {
 
-    override val binding: ActivityWSLoadingBinding by viewBinding {
-        ActivityWSLoadingBinding.inflate(layoutInflater)
-    }
+    override val binding: ActivityWSLoadingBinding by viewBinding(ActivityWSLoadingBinding::bind)
 
     override fun oViewInitialized() {
+        Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
             supportActionBar?.hide()
 
-            dialog1 = GifDialog.with(this)
-            dialog1.isCancelable(false)
-                .setTextBackgroundColor(ContextCompat.getColor(this, android.R.color.white))
-                .setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
-                .setResourceId(R.drawable.giphy6)
-                .showDialog("1")
+            compositeDisposable.add(
+                Single.just(Unit)
+                    .delay(4, TimeUnit.SECONDS)
+                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .subscribe({
+                        val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }) {}
+            )
 
-            Handler().postDelayed(Runnable {
-                val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }, 4000)
         } catch (e: Exception) {
         }
     }
