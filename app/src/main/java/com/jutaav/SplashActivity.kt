@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit
 const val SPLASH_TIME_OUT: Long = 1
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>(R.layout.activity_splash) {
+
     override val binding: ActivitySplashBinding by viewBinding(ActivitySplashBinding::bind)
 
     override fun oViewInitialized() {

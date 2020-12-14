@@ -53,5 +53,12 @@
     <string name="choose_lan_label3">Hindi</string>
     <string name="choose_lan_label4">En</string>
     <string name="choose_lan_label5">हिंदी</string>
+    <string name="str_sign_in_register">Sign in/Register</string>
+    <string name="str_please_enter_your_mobile_n_number_to_proceed">Please enter your mobile\n number to proceed</string>
+    <string name="str_mobile_number">mobile number</string>
+    <string name="str_91">+91-</string>
+    <string name="str_proceed">Proceed</string>
+    <string name="str_sign_in_another_way">Sign In another way</string>
+    <string name="str_via_email">via email</string>
 
 </resources>

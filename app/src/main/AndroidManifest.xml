@@ -10,8 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ChooseLanguageActivity"></activity>
-        <activity android:name=".activity.WSLoadingActivity"></activity>
+
+        <activity android:name=".activity.ChooseLanguageActivity" />
+        <activity android:name=".activity.WSLoadingActivity" />
+
         <activity
             android:name=".login.SignupOrgNameActivity"
             android:screenOrientation="portrait" />
@@ -36,6 +38,7 @@
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,6 +50,9 @@
             android:name=".reciver.ConnectivityReceiver"
             android:enabled="true"
             android:exported="true" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

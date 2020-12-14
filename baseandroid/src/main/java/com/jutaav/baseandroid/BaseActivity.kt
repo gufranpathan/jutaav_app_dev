@@ -13,6 +13,7 @@ import com.jutaav.base.BaseAutoDisposableImplementation
 
 abstract class BaseActivity<BINDING : ViewBinding>(@LayoutRes layoutRes: Int) :
     AppCompatActivity(layoutRes), BaseAutoDisposable by BaseAutoDisposableImplementation() {
+
     protected abstract val binding: BINDING
 
     override fun onCreate(savedInstanceState: Bundle?) {
