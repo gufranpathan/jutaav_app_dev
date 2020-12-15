@@ -10,6 +10,7 @@ import com.wada811.viewbinding.viewBinding
 import timber.log.Timber
 
 class OTPActivity : BaseActivity<ActivityLoginOtpBinding>(R.layout.activity_login_otp) {
+
     override val binding: ActivityLoginOtpBinding by viewBinding(ActivityLoginOtpBinding::bind)
 
     override fun oViewInitialized() {
@@ -30,7 +31,7 @@ class OTPActivity : BaseActivity<ActivityLoginOtpBinding>(R.layout.activity_logi
 
     private fun checkValidation() {
         try {
-            if (binding.otpView.otp?.isEmpty() == true) {
+            if (binding.otvOTP.otp?.isEmpty() == true) {
                 showShortToast(getString(R.string.error_otp1))
             } else {
                 val intent = Intent(this@OTPActivity, SignupOrganizationActivity::class.java)

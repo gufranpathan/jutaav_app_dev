@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sp_28">28sp</dimen>
-    <dimen name="sp_15">15sp</dimen>
-    <dimen name="dp_5">5dp</dimen>
-    <dimen name="dp_25">25dp</dimen>
-    <dimen name="dp_20">20dp</dimen>
-    <dimen name="dp_30">30dp</dimen>
-    <dimen name="dp_10">10dp</dimen>
-    <dimen name="sp_22">22sp</dimen>
-    <dimen name="dp_100">100dp</dimen>
-    <dimen name="dp_40">40dp</dimen>
-    <dimen name="dp_15">15dp</dimen>
+
+    <!--DPs-->
     <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_237">237dp</dimen>
+
+    <!--Sps-->
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+
 </resources>
