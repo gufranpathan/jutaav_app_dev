@@ -20,7 +20,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             supportActionBar?.hide()
 
             binding.btnProceed.setOnClickListener { checkValidation() }
-            binding.tvLoginwithemail.setOnClickListener {
+            binding.tvLoginViaEmail.setOnClickListener {
                 try {
                     val intent = Intent(this, LoginEmailActivity::class.java)
                     startActivity(intent)

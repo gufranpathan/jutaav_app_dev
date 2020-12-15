@@ -9,7 +9,7 @@
     tools:context=".login.LoginActivity">
 
     <ImageView
-        android:id="@+id/ivJutaavLogoLogin"
+        android:id="@+id/ivBrandLogo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="@null"
@@ -22,13 +22,13 @@
         android:id="@+id/tvSignInRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="poppins"
-        android:text="@string/str_sign_in_register"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/loginlabel1"
         android:textColor="@color/color_2E384D"
         android:textSize="@dimen/sp_28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivJutaavLogoLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/ivBrandLogo" />
 
     <TextView
         android:id="@+id/tvPleaseEnterOTP"
@@ -37,7 +37,7 @@
         android:layout_marginTop="@dimen/dp_5"
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal"
-        android:text="@string/str_please_enter_your_mobile_n_number_to_proceed"
+        android:text="@string/loginlabel2"
         android:textColor="@color/color_8798AD"
         android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,13 +50,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_25"
         android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/str_mobile_number"
+        android:text="@string/loginlabel3"
         android:textAllCaps="true"
         android:textColor="@color/color_B0BAC9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPleaseEnterOTP" />
 
-    <EditText
+    <com.jutaav.utils.PrefixEditText
         android:id="@+id/etMobileNumber"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_40"
@@ -70,9 +70,12 @@
         android:includeFontPadding="false"
         android:inputType="number"
         android:maxEms="10"
-        android:maxLength="14"
-        android:padding="@dimen/dp_5"
-        android:text="@string/str_91"
+        android:maxLength="10"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:tag="@string/loginlabel5"
         android:textColor="@color/color_2E384D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.01"
@@ -88,7 +91,7 @@
         android:layout_marginEnd="@dimen/dp_25"
         android:background="@drawable/rounded_login_btn"
         android:fontFamily="@font/poppins"
-        android:text="@string/str_proceed"
+        android:text="@string/loginlabel4"
         android:textAllCaps="false"
         android:textColor="@color/color_ffffff"
         android:textSize="@dimen/sp_15"
@@ -98,35 +101,19 @@
         app:layout_constraintTop_toBottomOf="@+id/etMobileNumber" />
 
     <TextView
-        android:id="@+id/tvSignInAnotherWay"
+        android:id="@+id/tvLoginViaEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_237"
         android:fontFamily="@font/poppins"
-        android:gravity="end|top"
-        android:text="@string/str_sign_in_another_way"
-        android:textColor="@color/color_B0BAC9"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/loginlabel6"
+        android:textColor="@color/color_8798AD"
         android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProceed"
-        app:lineHeight="@dimen/sp_22" />
-
-    <TextView
-        android:id="@+id/tvLoginwithemail"
-        android:layout_width="@dimen/dp_100"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginEnd="@dimen/dp_25"
-        android:fontFamily="@font/poppins"
-        android:gravity="start|top"
-        android:text="@string/str_via_email"
-        android:textColor="@color/color_2E5BFF"
-        android:textSize="@dimen/sp_15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSignInAnotherWay"
-        app:layout_constraintTop_toBottomOf="@+id/btnProceed"
-        app:lineHeight="@dimen/sp_22" />
+        app:layout_constraintTop_toBottomOf="@+id/btnProceed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
