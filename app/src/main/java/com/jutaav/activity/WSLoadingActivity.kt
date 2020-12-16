@@ -1,6 +1,7 @@
 package com.jutaav.activity
 
 import android.content.Intent
+import com.bumptech.glide.Glide
 import com.jutaav.R
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
@@ -22,6 +23,10 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
         try {
 
             GlideApp.with(this)
+                .load(R.raw.giphy6)
+                .into(binding.ivLoading)
+
+            Glide.with(this)
                 .load(R.raw.giphy6)
                 .into(binding.ivLoading)
 

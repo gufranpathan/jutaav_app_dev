@@ -15,13 +15,10 @@ class ChooseLanguageActivity :
 
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
-        try {
-            binding.llEnglish.setOnClickListener {
-                val intent =
-                    Intent(this@ChooseLanguageActivity, WSLoadingActivity::class.java)
-                startActivity(intent)
-            }
-        } catch (e: Exception) {
+        binding.llEnglish.setOnClickListener {
+            val intent =
+                Intent(this@ChooseLanguageActivity, WSLoadingActivity::class.java)
+            startActivity(intent)
         }
     }
 }
