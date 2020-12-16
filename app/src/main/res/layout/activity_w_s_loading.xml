@@ -9,49 +9,53 @@
     tools:context=".activity.WSLoadingActivity">
 
     <ImageView
-        android:id="@+id/iv_header"
+        android:id="@+id/ivHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dip"
+        android:layout_marginTop="@dimen/dp_30"
+        android:contentDescription="@null"
         android:src="@drawable/splash_txt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ImageView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tvSettingWorkSpaceDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.09"
         android:text="@string/workspace_load_label1"
-        android:textColor="@color/color_2E384D"
-        android:textSize="15sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_header">
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeader" />
 
-    </TextView>
+    <ImageView
+        android:id="@+id/ivLoading"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSettingWorkSpaceDesc" />
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dp_230"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:layout_marginEnd="20dip"
-        android:layout_marginBottom="100dip"
-        android:gravity="center"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
         android:text="@string/workspace_load_label2"
-        android:textColor="@color/color_2E384D"
-        android:textSize="15sp"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/sp_12"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </TextView>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLoading"
+        app:lineHeight="@dimen/sp_18" />
 </androidx.constraintlayout.widget.ConstraintLayout>

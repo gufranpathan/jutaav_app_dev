@@ -15,7 +15,7 @@ class ChooseLanguageActivity :
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-
+            supportActionBar?.hide()
         } catch (e: Exception) {
         }
     }

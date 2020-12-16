@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_ffffff"
+    android:background="@color/color_FFFFFF"
     tools:context=".login.LoginActivity">
 
     <ImageView
@@ -93,7 +93,7 @@
         android:fontFamily="@font/poppins"
         android:text="@string/loginlabel4"
         android:textAllCaps="false"
-        android:textColor="@color/color_ffffff"
+        android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

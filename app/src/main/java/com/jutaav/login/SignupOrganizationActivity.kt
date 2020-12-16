@@ -10,7 +10,6 @@ import com.wada811.viewbinding.viewBinding
 import timber.log.Timber
 
 class SignupOrganizationActivity :
-
     BaseActivity<ActivitySignupOrganizationBinding>(R.layout.activity_signup_organization) {
 
     override val binding: ActivitySignupOrganizationBinding by viewBinding(

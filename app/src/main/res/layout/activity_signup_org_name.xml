@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity"
-    android:background="@color/color_ffffff">
+    android:background="@color/color_FFFFFF"
+    tools:context=".login.LoginActivity">
+
     <ImageView
-        android:id="@+id/iv_header"
+        android:id="@+id/ivHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/splash_txt"
         android:layout_marginTop="30dip"
-        >
+        android:contentDescription="@null"
+        android:src="@drawable/splash_txt" />
 
-    </ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="20dip"
         android:layout_marginRight="20dip"
-        android:layout_centerInParent="true"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/signup_orgazinattion6"
             android:textColor="@color/color_2E384D"
-            android:text="@string/signup_orgazinattion6">
-
-        </TextView>
+            android:textSize="25sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,58 +38,47 @@
             android:layout_marginTop="10dip"
             android:gravity="center"
             android:text="@string/signup_orgazinattion1"
-            android:visibility="invisible"
             android:textColor="@color/color_8798AD"
-            android:textSize="15sp">
+            android:textSize="15sp"
+            android:visibility="invisible" />
 
-        </TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-
-            android:textAllCaps="true"
             android:layout_marginTop="10dip"
-            android:text="@string/signup_orgazinattion7">
+            android:text="@string/signup_orgazinattion7"
+            android:textAllCaps="true"
+            android:textSize="15sp" />
 
-        </TextView>
         <EditText
             android:id="@+id/etOrgName"
             android:layout_width="match_parent"
             android:layout_height="45dip"
             android:layout_marginTop="10dip"
-            android:imeOptions="actionDone"
-            android:paddingLeft="10dip"
-            android:maxLines="1"
-            android:hint="@string/signup_orgazinattion3"
             android:background="@drawable/rounded_edittext"
-            android:inputType="text">
+            android:hint="@string/signup_orgazinattion3"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="10dip" />
 
-        </EditText>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textAllCaps="true"
             android:layout_gravity="center"
             android:layout_marginTop="10dip"
-            android:visibility="invisible"
-            android:text="@string/signup_orgazinattion5">
-
-        </TextView>
-
-
+            android:text="@string/signup_orgazinattion5"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/btnProceed"
             android:layout_width="match_parent"
             android:layout_height="50dip"
+            android:layout_marginTop="15dip"
             android:background="@drawable/rounded_login_btn"
             android:text="@string/loginlabel4"
-            android:textColor="@color/color_ffffff"
-            android:layout_marginTop="15dip">
-
-        </Button>
-
+            android:textColor="@color/color_FFFFFF" />
     </LinearLayout>
 </RelativeLayout>

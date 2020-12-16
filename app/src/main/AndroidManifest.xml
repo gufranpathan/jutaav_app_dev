@@ -11,8 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.ChooseLanguageActivity" />
-        <activity android:name=".activity.WSLoadingActivity" />
+        <activity
+            android:name=".activity.ChooseLanguageActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.WSLoadingActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity
             android:name=".login.SignupOrgNameActivity"

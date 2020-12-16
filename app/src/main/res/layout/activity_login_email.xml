@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_ffffff"
+    android:background="@color/color_FFFFFF"
     tools:context=".login.LoginActivity">
 
     <ImageView
@@ -102,7 +102,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_login_btn"
         android:text="@string/loginlabel4"
-        android:textColor="@color/color_ffffff"
+        android:textColor="@color/color_FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/tv_loginwithmobile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

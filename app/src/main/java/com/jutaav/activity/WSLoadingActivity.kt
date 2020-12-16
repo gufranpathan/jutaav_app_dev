@@ -1,6 +1,7 @@
 package com.jutaav.activity
 
 import android.content.Intent
+import com.bumptech.glide.Glide
 import com.jutaav.R
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
@@ -20,6 +21,10 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
             supportActionBar?.hide()
+
+            Glide.with(this)
+                .load(R.raw.giphy6)
+                .into(binding.ivLoading)
 
             compositeDisposable.add(
                 Single.just(Unit)
