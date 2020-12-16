@@ -17,7 +17,7 @@
     <string name="dialog_ok_btn">OK</string>
 
     <string name="loginlabel1">Sign in/Register</string>
-    <string name="loginlabel2">Please enter your mobile number \nto proceed</string>
+    <string name="loginlabel2">Please enter your mobile\n number to proceed</string>
     <string name="loginlabel3">Mobile Number</string>
     <string name="loginlabel4">Proceed</string>
     <string name="loginlabel5">+91-</string>
@@ -31,11 +31,11 @@
 
     <string name="error_login1">Please enter mobile number</string>
 
-    <string name="otplabel1">Please enter your OTP to \nproceed</string>
+    <string name="otplabel1">Please enter your OTP to\n proceed</string>
     <string name="otplabel2">ONE TIME PASSWORD (OTP)</string>
     <string name="error_otp1">Please enter otp</string>
 
-    <string name="signup_orgazinattion1">Please enter your organisation \nname or code to proceed</string>
+    <string name="signup_orgazinattion1">Please enter your organisation\n name or code to proceed</string>
     <string name="signup_orgazinattion2">ORGANSIATION NAME</string>
     <string name="signup_orgazinattion3">Enter Organisation Name Here</string>
     <string name="signup_orgazinattion4">ORGANISATION CODE</string>
@@ -53,12 +53,5 @@
     <string name="choose_lan_label3">Hindi</string>
     <string name="choose_lan_label4">En</string>
     <string name="choose_lan_label5">हिंदी</string>
-    <string name="str_sign_in_register">Sign in/Register</string>
-    <string name="str_please_enter_your_mobile_n_number_to_proceed">Please enter your mobile\n number to proceed</string>
-    <string name="str_mobile_number">mobile number</string>
-    <string name="str_91">+91-</string>
-    <string name="str_proceed">Proceed</string>
-    <string name="str_sign_in_another_way">Sign In another way</string>
-    <string name="str_via_email">via email</string>
 
 </resources>
