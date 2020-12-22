@@ -20,8 +20,6 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
 
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
-        try {
-
             GlideApp.with(this)
                 .load(R.raw.giphy6)
                 .into(binding.ivLoading)
@@ -42,8 +40,5 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
                         finish()
                     }) {}
             )
-
-        } catch (e: Exception) {
-        }
     }
 }
