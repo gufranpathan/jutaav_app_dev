@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -39,9 +40,7 @@ dependencies {
 
     implementation(project(":baseandroid"))
 
-    implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'// kotlin
+
+    kapt 'com.github.bumptech.glide:compiler:4.11.0' // Glide
 }
