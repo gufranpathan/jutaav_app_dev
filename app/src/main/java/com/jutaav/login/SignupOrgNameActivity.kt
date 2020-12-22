@@ -17,7 +17,6 @@ class SignupOrgNameActivity :
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
             binding.btnProceed.setOnClickListener { checkValidation() }
         } catch (e: Exception) {
         }
@@ -34,6 +33,4 @@ class SignupOrgNameActivity :
         } catch (e: Exception) {
         }
     }
-
-
 }

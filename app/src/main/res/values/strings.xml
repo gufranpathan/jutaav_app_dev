@@ -54,4 +54,11 @@
     <string name="choose_lan_label4">En</string>
     <string name="choose_lan_label5">हिंदी</string>
 
+    <string name="txt_link_phonebook_to_app_caps">LINK PHONEBOOK TO JUTAAV\n APP</string>
+    <string name="txt_task_completed_title">Task Completed</string>
+    <string name="txt_will_take_action_later_big">No, I will take action later</string>
+
+    <string name="txt_task_complete_greet_big">Congratulations on completing the  task!</string>
+    <string name="txt_complete_task_dummy">complete 3 more tasks to reach your daily goal</string>
+
 </resources>

@@ -6,7 +6,7 @@ import com.jutaav.R
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityWSLoadingBinding
-import com.jutaav.home.HomeActivity
+import com.jutaav.task.TaskCompleteActivity
 import com.wada811.viewbinding.viewBinding
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
@@ -20,7 +20,6 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
 
             Glide.with(this)
                 .load(R.raw.giphy6)
@@ -31,7 +30,9 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
                     .delay(4, TimeUnit.SECONDS)
                     .subscribeOn(AndroidSchedulers.mainThread())
                     .subscribe({
-                        val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
+                        //val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
+                        val intent =
+                            Intent(this@WSLoadingActivity, TaskCompleteActivity::class.java)
                         startActivity(intent)
                         finish()
                     }) {}

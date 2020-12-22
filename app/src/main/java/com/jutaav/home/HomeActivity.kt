@@ -14,7 +14,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
         } catch (e: Exception) {
         }
     }

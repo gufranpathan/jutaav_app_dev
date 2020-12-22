@@ -17,8 +17,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
-
             binding.btnProceed.setOnClickListener { checkValidation() }
             binding.tvLoginViaEmail.setOnClickListener {
                 try {

@@ -16,9 +16,8 @@ class LoginEmailActivity : BaseActivity<ActivityLoginEmailBinding>(R.layout.acti
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
             binding.btnProceed.setOnClickListener { checkValidation() }
-            binding.tvLoginwithmobile.setOnClickListener {
+            binding.tvSignInViaOTP.setOnClickListener {
                 try {
                     val intent = Intent(this@LoginEmailActivity, LoginActivity::class.java)
                     startActivity(intent)
