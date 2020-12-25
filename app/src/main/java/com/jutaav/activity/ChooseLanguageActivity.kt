@@ -1,6 +1,5 @@
 package com.jutaav.activity
 
-import android.content.Intent
 import com.jutaav.R
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
@@ -16,9 +15,7 @@ class ChooseLanguageActivity :
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         binding.llEnglish.setOnClickListener {
-            val intent =
-                Intent(this@ChooseLanguageActivity, WSLoadingActivity::class.java)
-            startActivity(intent)
+            startActivity(WSLoadingActivity.getIntent(this@ChooseLanguageActivity))
         }
     }
 }

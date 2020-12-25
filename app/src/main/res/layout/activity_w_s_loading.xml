@@ -8,7 +8,7 @@
     android:background="@color/white"
     tools:context=".activity.WSLoadingActivity">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivBrandLogo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -32,11 +32,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivBrandLogo" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLoading"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/dp_50"
         android:contentDescription="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

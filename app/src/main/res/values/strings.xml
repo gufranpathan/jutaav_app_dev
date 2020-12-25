@@ -40,7 +40,7 @@
     <string name="signup_orgazinattion3">Enter Organisation Name Here</string>
     <string name="signup_orgazinattion4">ORGANISATION CODE</string>
     <string name="signup_orgazinattion5">OR</string>
-    <string name="signup_orgazinattion6">Please tell us how we can address you</string>
+    <string name="signup_orgazinattion6">Please Tell Us How We Can Address You</string>
     <string name="signup_orgazinattion7">Name</string>
 
     <string name="workspace_load_label1">Setting up your workspace for you</string>
@@ -60,5 +60,58 @@
 
     <string name="txt_task_complete_greet_big">Congratulations on completing the  task!</string>
     <string name="txt_complete_task_dummy">complete 3 more tasks to reach your daily goal</string>
+
+    <string name="txt_help_and_faq_big">Help &amp; FAQ</string>
+    <string name="txt_messages_big">Messages</string>
+    <string name="txt_my_tasks_big">My Tasks</string>
+    <string name="txt_community_big">Community</string>
+    <string name="txt_my_profile_big">My Profile</string>
+
+    <string name="str_contact_list">CONTACT LIST</string>
+    <string name="str_link_phonebook_now">Link Phonebook Now</string>
+    <string name="str_create_list">Create List</string>
+    <string name="str_contact_list2">Contact List</string>
+    <string name="str_create_broadcast_list_234">Create Broadcast List #234</string>
+    <string name="str_share_to_whatsapp_broadcast_list_234">Share to WhatsApp Broadcast list #234</string>
+    <string name="str_share_to_whatsApp">Share to WhatsApp</string>
+
+    <string name="str_start_calling">Start Calling</string>
+    <string name="str_take_action">Take Action</string>
+
+    <string name="str_enter_name_here">Enter Name Here</string>
+    <string name="str_enter_email_here">Enter Email Here</string>
+    <string name="str_facebook_id">FACEBOOK ID</string>
+    <string name="str_enter_facebook_id_here">Enter Facebook Id Here</string>
+    <string name="str_enter_password_here">Enter Password Here</string>
+    <string name="str_enter_language_here">Enter Language Here</string>
+    <string name="str_language">Language</string>
+
+    <string name="str_link_phonebook_to_jutaav_app">Link Phonebook to Jutaav App</string>
+    <string name="txt_add_new_contact_title">Add New Contact</string>
+    <string name="txt_first_big">First</string>
+    <string name="txt_middle_big">Middle</string>
+    <string name="txt_last_big">Last</string>
+    <string name="txt_guardian_s_name_title">Guardian’s Name</string>
+    <string name="txt_gender_big">Gender</string>
+    <string name="txt_select_big">Select</string>
+    <string name="txt_date_of_birth_title">Date Of Birth</string>
+    <string name="txt_date_of_birth_dummy">25-05-1990</string>
+    <string name="txt_relation_with_guardian_big">Relationship With Guardian</string>
+    <string name="txt_brother_big">Brother</string>
+    <string name="txt_page_big">Page</string>
+    <string name="txt_section_big">Section</string>
+    <string name="txt_booth_big">Booth</string>
+    <string name="txt_booth_type_big">Booth Type</string>
+    <string name="txt_save_changes_title">Save Changes</string>
+    <string name="str_welcome">Welcome,</string>
+    <string name="str_complete_your_profile">Complete Your Profile</string>
+    <string name="str_good_job_complete_your_profile">Good job! You updated your profile! Complete these set of tasks to complete your profile.</string>
+    <string name="str_state">STATE</string>
+
+    <string-array name="array_states">
+        <item>Gujarat</item>
+        <item>Rajasthan</item>
+        <item>Tamil Nadu</item>
+    </string-array>
 
 </resources>

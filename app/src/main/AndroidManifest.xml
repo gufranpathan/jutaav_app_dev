@@ -13,42 +13,37 @@
 
         <activity
             android:name=".activity.ChooseLanguageActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+
+        </activity>
 
         <activity
             android:name=".activity.WSLoadingActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.SignupOrgNameActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.SignupOrganizationActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginPasswordActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginEmailActivity"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".home.HomeActivity"
-            android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.OTPActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.HomeActivity"
             android:screenOrientation="portrait">
 
             <intent-filter>
@@ -57,14 +52,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.OnboardActivity">
 
+        </activity>
+        <activity
+            android:name=".activity.FAQActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LinkPhonebookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CreateBroadcastListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShareToWhatsAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".task.PhoneCallingTaskListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".task.GeneralTaskListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".task.AfterTaskCompleteActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".task.TaskCompleteActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity
             android:name=".task.AfterTaskCompleteActivity"

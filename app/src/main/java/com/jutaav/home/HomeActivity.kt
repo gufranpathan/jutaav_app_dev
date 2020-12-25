@@ -1,20 +1,32 @@
 package com.jutaav.home
 
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.jutaav.R
-import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityHomeBinding
+import com.jutaav.fragment.AddNewContactFragment
 import com.wada811.viewbinding.viewBinding
-import timber.log.Timber
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
     override val binding: ActivityHomeBinding by viewBinding(ActivityHomeBinding::bind)
 
     override fun oViewInitialized() {
-        Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
-        try {
-        } catch (e: Exception) {
-        }
+        val fragment = AddNewContactFragment()
+        addFragment(fragment, R.id.frmMain)
+    }
+
+    fun addFragment(fragment: Fragment, frameId: Int) {
+        supportFragmentManager.inTransaction { add(frameId, fragment) }
+    }
+
+    fun replaceFragment(fragment: Fragment, frameId: Int) {
+        supportFragmentManager.inTransaction { replace(frameId, fragment) }
+    }
+
+    inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> FragmentTransaction) {
+        beginTransaction().func().commit()
     }
 }

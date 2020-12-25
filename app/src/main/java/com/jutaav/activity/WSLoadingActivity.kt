@@ -1,5 +1,6 @@
 package com.jutaav.activity
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.base.extensions.tag
@@ -19,25 +20,28 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
 
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
-            GlideApp.with(this)
-                .load(R.raw.giphy6)
-                .into(binding.ivLoading)
 
-            GlideApp.with(this)
-                .load(R.raw.giphy6)
-                .into(binding.ivLoading)
+        GlideApp.with(this)
+            .load(R.raw.giphy6)
+            .into(binding.ivLoading)
 
-            compositeDisposable.add(
-                Single.just(Unit)
-                    .delay(4, TimeUnit.SECONDS)
-                    .subscribeOn(AndroidSchedulers.mainThread())
-                    .subscribe({
-                        //val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
-                        val intent =
-                            Intent(this@WSLoadingActivity, TaskCompleteActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }) {}
-            )
+        compositeDisposable.add(
+            Single.just(Unit)
+                .delay(4, TimeUnit.SECONDS)
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    //val intent = Intent(this@WSLoadingActivity, HomeActivity::class.java)
+                    val intent =
+                        Intent(this@WSLoadingActivity, TaskCompleteActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }) {}
+        )
+    }
+
+    companion object {
+        fun getIntent(context: Context): Intent {
+            return Intent(context, WSLoadingActivity::class.java)
+        }
     }
 }
