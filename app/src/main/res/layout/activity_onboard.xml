@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activity.OnboardActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -85,95 +86,195 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayoutBackgroundGray"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
-        android:background="@drawable/rounded_corner_gray_bg_rectangle"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clBlue"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner_blue_bg_rectangle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayoutBackgroundGray">
+            android:id="@+id/constraintLayoutBackgroundGray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:background="@drawable/rounded_corner_gray_bg_rectangle"
+            android:paddingBottom="@dimen/dp_20">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBlue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_blue_bg_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutBackgroundGray">
+
+                <TextView
+                    android:id="@+id/tvCompleteYourProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="@string/str_complete_your_profile"
+                    android:textColor="@color/color_FBFBFB"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/pbCompleteYourProfile"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:progress="45"
+                    android:progressDrawable="@drawable/progress_bar_progress_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCompleteYourProfile" />
+
+                <TextView
+                    android:id="@+id/tvGoodJobCompleteYourProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_15"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="start"
+                    android:lineHeight="@dimen/sp_16"
+                    android:text="@string/str_good_job_complete_your_profile"
+                    android:textColor="@color/color_FBFBFB"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pbCompleteYourProfile" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/tvCompleteYourProfile"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvStateTitle"
+                style="@style/onboardingInputTitleText"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/str_state"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clBlue" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerState"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:entries="@array/array_states"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStateTitle" />
+
+            <TextView
+                android:id="@+id/tvDistrictTitle"
+                style="@style/onboardingInputTitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/str_district"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerState" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerDistrict"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:entries="@array/array_district"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDistrictTitle" />
+
+            <TextView
+                android:id="@+id/tvConstituencyTitle"
+                style="@style/onboardingInputTitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/str_constituency"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDistrict" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerConstituency"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:entries="@array/array_constituency"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvConstituencyTitle" />
+
+            <TextView
+                android:id="@+id/tvBoothTitle"
+                style="@style/onboardingInputTitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/str_booth"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerConstituency" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerBooth"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:entries="@array/array_booth"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBoothTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateProfile"
+                style="@style/primaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_20"
-                android:fontFamily="@font/poppins"
-                android:gravity="center"
-                android:text="@string/str_complete_your_profile"
-                android:textColor="@color/color_FBFBFB"
-                android:textSize="@dimen/sp_15"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ProgressBar
-                android:id="@+id/pbCompleteYourProfile"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_12"
-                android:layout_marginTop="@dimen/dp_15"
-                android:layout_marginEnd="@dimen/dp_15"
-                android:progress="45"
-                android:progressDrawable="@drawable/progress_bar_progress_bg"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:text="@string/str_update_profile"
+                android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCompleteYourProfile" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerBooth" />
 
-            <TextView
-                android:id="@+id/tvGoodJobCompleteYourProfile"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_15"
-                android:fontFamily="@font/poppins"
-                android:gravity="start"
-                android:lineHeight="@dimen/sp_16"
-                android:text="@string/str_good_job_complete_your_profile"
-                android:textColor="@color/color_FBFBFB"
-                android:textSize="@dimen/sp_10"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pbCompleteYourProfile" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tvStateTitle"
-            style="@style/onboardingInputTitleText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_30"
-            android:layout_marginTop="@dimen/dp_10"
-            android:text="@string/str_state"
-            android:textAllCaps="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clBlue" />
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/spinnerState"
-            android:layout_width="0dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="25dp"
-            android:entries="@array/array_states"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvStateTitle" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
