@@ -20,6 +20,6 @@ abstract class BaseFragment<BINDING : ViewBinding>(@LayoutRes val layoutRes: Int
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return layoutInflater.inflate(layoutRes, container, true)
+        return layoutInflater.inflate(layoutRes, container, false)
     }
 }

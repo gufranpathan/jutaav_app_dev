@@ -336,7 +336,7 @@
                 app:layout_constraintTop_toBottomOf="@id/etBoothType" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/mbTakeActionLater"
+                android:id="@+id/mbSaveChanges"
                 style="@style/secondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
