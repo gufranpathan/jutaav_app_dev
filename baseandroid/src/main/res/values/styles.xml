@@ -1,3 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerStyle">@style/BaseTheme.Spinner</item>
+        <item name="android:windowBackground">#E5E5E5</item>
+        <item name="android:toolbarStyle">@style/BaseTheme.Toolbar</item>
+    </style>
+
+    <style name="BaseTheme.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">false</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:popupBackground">@drawable/background_spinner_popup</item>
+        <item name="android:dropDownVerticalOffset">8dp</item>
+        <item name="android:background">@drawable/background_app_spinner</item>
+        <item name="android:dropDownWidth">314dp</item>
+    </style>
+
+    <style name="BaseTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/background_toolbar</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+        <item name="navigationIcon">@drawable/ic_back</item>
+    </style>
 </resources>

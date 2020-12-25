@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="BaseTheme">
-        <!-- Customize your theme here. -->
+
+    <style name="BaseTheme.V21" parent="BaseTheme">
         <item name="android:statusBarColor">@color/color_FFFFFF</item>
+        <item name="android:spinnerStyle">@style/AppTheme.Spinner</item>
+        <item name="android:toolbarStyle">@style/BaseTheme.Toolbar.v21</item>
     </style>
+
+    <style name="BaseTheme.Toolbar.v21" parent="BaseTheme.Toolbar">
+        <item name="android:elevation">12dp</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme.V21" />
 </resources>

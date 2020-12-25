@@ -1,23 +1,31 @@
 package com.jutaav.fragment
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.jutaav.R
 import com.jutaav.baseandroid.BaseFragment
 import com.jutaav.databinding.FragmentAddNewContactBinding
+import com.jutaav.login.LoginPasswordActivity
+import com.jutaav.login.SignupOrgNameActivity
 import com.wada811.viewbinding.viewBinding
 
-class AddNewContactFragment : BaseFragment<FragmentAddNewContactBinding>() {
+class AddNewContactFragment :
+    BaseFragment<FragmentAddNewContactBinding>(R.layout.fragment_add_new_contact) {
 
     override val binding: FragmentAddNewContactBinding by viewBinding(FragmentAddNewContactBinding::bind)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        //return inflater.inflate(R.layout.fragment_add_new_contact, container, false)
-        return binding.root
+        binding.mbAddNewContact.setOnClickListener {
+            val intent = Intent(requireActivity(), LoginPasswordActivity::class.java)
+            activity?.startActivity(intent)
+        }
+
+        binding.mbSaveChanges.setOnClickListener {
+            val intent = Intent(requireActivity(), SignupOrgNameActivity::class.java)
+            activity?.startActivity(intent)
+        }
     }
 }

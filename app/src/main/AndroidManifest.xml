@@ -56,15 +56,6 @@
 
         </activity>
         <activity
-            android:name=".activity.FAQActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.ContactListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.LinkPhonebookActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activity.CreateBroadcastListActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -75,9 +66,6 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".task.GeneralTaskListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.EditProfileActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".task.AfterTaskCompleteActivity"
