@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="@dimen/dp_50"
-    android:paddingTop="@dimen/dp_30"
-    android:paddingEnd="@dimen/dp_50"
+    android:background="@color/white"
     tools:context=".fragment.AddNewContactFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingEnd="@dimen/dp_20">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,28 +47,30 @@
             <EditText
                 android:id="@+id/etFirstName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
                 android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
                 android:hint="@string/txt_first_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
 
             <EditText
                 android:id="@+id/etMiddleName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
                 android:layout_marginStart="@dimen/dp_30"
                 android:layout_marginTop="@dimen/dp_8"
                 android:layout_marginEnd="@dimen/dp_30"
                 android:gravity="center"
                 android:hint="@string/txt_middle_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
                 android:maxLines="1"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
                 app:layout_constraintEnd_toStartOf="@+id/etLastName"
                 app:layout_constraintStart_toEndOf="@+id/etFirstName"
                 app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
@@ -75,12 +78,14 @@
             <EditText
                 android:id="@+id/etLastName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
                 android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
                 android:hint="@string/txt_last_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
 
@@ -100,27 +105,30 @@
             <EditText
                 android:id="@+id/etGuardianFirstName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
                 android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
                 android:hint="@string/txt_first_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
 
             <EditText
                 android:id="@+id/etGuardianMiddleName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_30"
                 android:layout_marginStart="@dimen/dp_30"
                 android:layout_marginTop="@dimen/dp_8"
                 android:layout_marginEnd="@dimen/dp_30"
                 android:gravity="center"
                 android:hint="@string/txt_middle_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
                 app:layout_constraintEnd_toStartOf="@+id/etGuardianLastName"
                 app:layout_constraintStart_toEndOf="@+id/etGuardianFirstName"
                 app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
@@ -128,12 +136,14 @@
             <EditText
                 android:id="@+id/etGuardianLastName"
                 style="@style/InputField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
                 android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
                 android:hint="@string/txt_last_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
 
@@ -150,16 +160,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etGuardianFirstName" />
 
-            <EditText
-                android:id="@+id/etGender"
-                style="@style/InputField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:hint="@string/txt_select_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_gender"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvGenderTitle" />
 
@@ -174,18 +186,21 @@
                 android:textColor="@color/color_000000"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etGender" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
 
-            <EditText
-                android:id="@+id/etDateOfBirth"
+            <TextView
+                android:id="@+id/tvDateOfBirth"
                 style="@style/InputField"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
+                android:background="@drawable/background_stroke_spinner"
                 android:hint="@string/txt_date_of_birth_dummy"
                 android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:paddingTop="0dp"
+                android:paddingEnd="@dimen/dp_23"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/sp_15"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvDateOfBirthTitle" />
 
@@ -200,17 +215,20 @@
                 android:textColor="@color/color_000000"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etDateOfBirth" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDateOfBirth" />
 
             <EditText
                 android:id="@+id/etRelationWithGuardian"
                 style="@style/InputField"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
                 android:hint="@string/txt_brother_big"
+                android:imeOptions="actionDone"
+                android:inputType="text"
                 android:paddingStart="@dimen/dp_15"
                 android:paddingEnd="@dimen/dp_15"
+                android:textSize="@dimen/sp_15"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvRelationWithGuardianTitle" />
 
@@ -227,16 +245,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etRelationWithGuardian" />
 
-            <EditText
-                android:id="@+id/etPageTitle"
-                style="@style/InputField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerPageTitle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:hint="@string/txt_select_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_page"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvPageTitle" />
 
@@ -251,18 +271,20 @@
                 android:textColor="@color/color_000000"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etPageTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPageTitle" />
 
-            <EditText
-                android:id="@+id/etSection"
-                style="@style/InputField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerSection"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:hint="@string/txt_select_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_section"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvSectionTitle" />
 
@@ -277,18 +299,20 @@
                 android:textColor="@color/color_000000"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etSection" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSection" />
 
-            <EditText
-                android:id="@+id/etBooth"
-                style="@style/InputField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerBooth"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:hint="@string/txt_select_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_booth"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBoothTitle" />
 
@@ -303,18 +327,20 @@
                 android:textColor="@color/color_000000"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etBooth" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerBooth" />
 
-            <EditText
-                android:id="@+id/etBoothType"
-                style="@style/InputField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerBoothType"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_8"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:hint="@string/txt_select_big"
-                android:paddingStart="@dimen/dp_15"
-                android:paddingEnd="@dimen/dp_15"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_booth_type"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                android:theme="@style/SpinnerWithShadow"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBoothTypeTitle" />
 
@@ -333,7 +359,7 @@
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/etBoothType" />
+                app:layout_constraintTop_toBottomOf="@id/spinnerBoothType" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mbSaveChanges"
