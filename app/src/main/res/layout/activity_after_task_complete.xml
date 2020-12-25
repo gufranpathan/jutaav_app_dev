@@ -25,7 +25,7 @@
                 style="@style/ToolBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/toolbar_bg"
+                android:background="@drawable/ic_toolbar_bg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +36,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="@+id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchInternet"
@@ -50,22 +50,22 @@
                 android:checked="true"
                 android:theme="@style/SwitchCompatStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintEnd_toStartOf="@+id/guideLineRight"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
+                android:id="@+id/guideLineLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="10dp" />
+                app:layout_constraintGuide_begin="@dimen/dp_10" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
+                android:id="@+id/guideLineRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="10dp" />
+                app:layout_constraintGuide_end="@dimen/dp_10" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -75,7 +75,7 @@
                 android:src="@drawable/splash_txt"
                 app:layout_constraintBottom_toBottomOf="@+id/toolbar"
                 app:layout_constraintEnd_toEndOf="@+id/switchInternet"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideLineLeft"
                 app:layout_constraintTop_toTopOf="@+id/toolbar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -93,25 +93,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topNavBar" />
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mcrdSuccessIllustration"
-        android:layout_width="@dimen/dp_198"
-        android:layout_height="@dimen/dp_198"
-        app:cardBackgroundColor="@color/color_F4F4F4"
-        app:cardCornerRadius="@dimen/dp_45"
-        app:cardElevation="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_gray_bg_square"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingTop="@dimen/dp_45"
+        android:paddingEnd="@dimen/dp_35"
+        android:paddingBottom="@dimen/dp_45"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_thumb_up">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <!--<androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_thumb_up" />
+            app:srcCompat="@drawable/ic_thumb_up" />-->
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.appcompat.widget.AppCompatImageView>
 
     <TextView
         android:id="@+id/mbTaskCompleted"

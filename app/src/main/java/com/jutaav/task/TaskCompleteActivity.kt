@@ -2,7 +2,6 @@ package com.jutaav.task
 
 import android.content.Intent
 import com.jutaav.R
-import com.jutaav.activity.WSLoadingActivity
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.databinding.ActivityTaskCompleteBinding
@@ -18,13 +17,10 @@ class TaskCompleteActivity :
 
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
-        try {
-            binding.mcrdSuccessIllustration.setOnClickListener {
-                val intent =
-                    Intent(this@TaskCompleteActivity, AfterTaskCompleteActivity::class.java)
-                startActivity(intent)
-            }
-        } catch (e: Exception) {
+        binding.mcrdSuccessIllustration.setOnClickListener {
+            val intent =
+                Intent(this@TaskCompleteActivity, AfterTaskCompleteActivity::class.java)
+            startActivity(intent)
         }
     }
 }
