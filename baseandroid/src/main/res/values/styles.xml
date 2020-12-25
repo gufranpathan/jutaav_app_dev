@@ -5,8 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <!--<item name="android:spinnerStyle">@style/BaseTheme.Spinner</item>-->
-        <item name="android:dropDownListViewStyle">@style/BaseTheme.Spinner</item>
+        <item name="android:spinnerStyle">@style/BaseTheme.Spinner</item>
         <item name="android:windowBackground">#E5E5E5</item>
         <item name="android:toolbarStyle">@style/BaseTheme.Toolbar</item>
     </style>
@@ -17,9 +16,7 @@
         <item name="android:popupBackground">@drawable/background_spinner_popup</item>
         <item name="android:dropDownVerticalOffset">8dp</item>
         <item name="android:background">@drawable/background_app_spinner</item>
-        <item name="android:dropDownWidth">280dp</item>
-        <item name="android:textColor">#343C44</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:dropDownWidth">314dp</item>
     </style>
 
     <style name="BaseTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar">

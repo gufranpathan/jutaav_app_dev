@@ -1,11 +1,9 @@
 package com.jutaav.fragment
 
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.View.OnTouchListener
 import com.jutaav.R
 import com.jutaav.baseandroid.BaseFragment
 import com.jutaav.databinding.FragmentAddNewContactBinding
@@ -28,7 +26,7 @@ class AddNewContactFragment :
 
         setDateTimeField()
 
-        binding.tvDateOfBirth.setOnTouchListener(OnTouchListener { v, event ->
+        binding.tvDateOfBirth.setOnTouchListener(View.OnTouchListener { v, event ->
             mDatePickerDialog!!.show()
             false
         })
@@ -48,7 +46,7 @@ class AddNewContactFragment :
         val newCalendar: Calendar = Calendar.getInstance()
         mDatePickerDialog = DatePickerDialog(
             requireContext(),
-            OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                 val newDate: Calendar = Calendar.getInstance()
                 newDate.set(year, monthOfYear, dayOfMonth)
                 val sd = SimpleDateFormat("dd-MM-yyyy")
