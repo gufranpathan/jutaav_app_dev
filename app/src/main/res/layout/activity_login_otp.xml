@@ -5,63 +5,52 @@
     android:id="@+id/relativeLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_ffffff"
+    android:background="@color/color_FFFFFF"
     tools:context=".login.OTPActivity">
 
     <ImageView
         android:id="@+id/ivBrandLogo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30"
-        android:layout_marginBottom="@dimen/dp_10"
         android:contentDescription="@null"
-        android:src="@drawable/splash_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splash_txt" />
 
     <TextView
         android:id="@+id/tvSignInRegister"
+        style="@style/onboardingPrimaryTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
         android:gravity="center"
-        android:includeFontPadding="false"
         android:text="@string/loginlabel1"
-        android:textColor="@color/color_2E384D"
-        android:textSize="@dimen/sp_28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivBrandLogo" />
 
     <TextView
         android:id="@+id/tvSignInDescription"
+        style="@style/onboardingPrimaryDescriptionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
         android:layout_marginBottom="@dimen/dp_10"
-        android:fontFamily="@font/poppins"
-        android:includeFontPadding="false"
         android:text="@string/otplabel1"
         android:textAlignment="center"
-        android:textColor="@color/color_8798AD"
-        android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignInRegister" />
 
     <TextView
         android:id="@+id/tvOtpTitle"
+        style="@style/onboardingInputTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_25"
         android:layout_marginTop="@dimen/dp_20"
-        android:fontFamily="@font/poppins"
-        android:includeFontPadding="false"
         android:text="@string/otplabel2"
         android:textAllCaps="true"
-        android:textColor="@color/color_B0BAC9"
-        android:textSize="@dimen/sp_12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignInDescription" />
 
@@ -82,35 +71,29 @@
         app:otp_text_size="@dimen/dp_25"
         app:width="@dimen/dp_40" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnProceed"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        style="@style/onboardingprimaryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_25"
         android:layout_marginTop="@dimen/dp_30"
         android:layout_marginEnd="@dimen/dp_25"
-        android:background="@drawable/rounded_login_btn"
-        android:fontFamily="@font/poppins"
-        android:includeFontPadding="false"
+        android:letterSpacing="0"
+        android:padding="@dimen/dp_15"
         android:text="@string/loginlabel4"
         android:textAllCaps="false"
-        android:textColor="@color/color_ffffff"
-        android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOTP" />
 
     <TextView
         android:id="@+id/tvLoginViaEmail"
+        style="@style/onboardingPrimaryDescriptionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
-        android:includeFontPadding="false"
         android:text="@string/loginlabel6"
-        android:textColor="@color/color_8798AD"
-        android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnProceed" />

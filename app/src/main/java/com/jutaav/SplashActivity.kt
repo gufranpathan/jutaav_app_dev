@@ -24,7 +24,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(R.layout.activity_spl
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
             compositeDisposable.add(
                 Single.just(Unit)
                     .delay(SPLASH_TIME_OUT, TimeUnit.SECONDS)

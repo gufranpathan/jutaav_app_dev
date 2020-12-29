@@ -17,7 +17,6 @@ class LoginPasswordActivity :
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
             binding.btnProceed.setOnClickListener { checkValidation() }
             binding.tvLoginwithmobile.setOnClickListener {
                 try {

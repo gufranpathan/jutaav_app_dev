@@ -2,6 +2,7 @@ package com.jutaav.login
 
 import android.content.Intent
 import com.jutaav.R
+import com.jutaav.activity.ChooseLanguageActivity
 import com.jutaav.base.extensions.tag
 import com.jutaav.baseandroid.BaseActivity
 import com.jutaav.baseandroid.extensions.showShortToast
@@ -10,7 +11,6 @@ import com.wada811.viewbinding.viewBinding
 import timber.log.Timber
 
 class SignupOrganizationActivity :
-
     BaseActivity<ActivitySignupOrganizationBinding>(R.layout.activity_signup_organization) {
 
     override val binding: ActivitySignupOrganizationBinding by viewBinding(
@@ -20,7 +20,6 @@ class SignupOrganizationActivity :
     override fun oViewInitialized() {
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
         try {
-            supportActionBar?.hide()
             binding.btnProceed.setOnClickListener { checkValidation() }
         } catch (e: Exception) {
         }
@@ -35,7 +34,8 @@ class SignupOrganizationActivity :
             } else {
                 try {
                     val intent =
-                        Intent(this@SignupOrganizationActivity, SignupOrgNameActivity::class.java)
+                        //Intent(this@SignupOrganizationActivity, SignupOrgNameActivity::class.java)
+                        Intent(this@SignupOrganizationActivity, ChooseLanguageActivity::class.java)
                     startActivity(intent)
                 } catch (e: Exception) {
                 }

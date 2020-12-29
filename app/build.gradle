@@ -1,9 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
+
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.jutaav"
@@ -33,10 +35,12 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation(project(":baseandroid"))
 
-    implementation 'com.android.volley:volley:1.1.0'
-    implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx' // kotlin
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
+
+    kapt 'com.github.bumptech.glide:compiler:4.11.0' // Glide
 }

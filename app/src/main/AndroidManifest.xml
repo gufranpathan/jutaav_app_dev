@@ -11,30 +11,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.ChooseLanguageActivity" />
-        <activity android:name=".activity.WSLoadingActivity" />
+        <activity
+            android:name=".activity.ChooseLanguageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.WSLoadingActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".login.SignupOrgNameActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".login.SignupOrganizationActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".login.LoginPasswordActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".login.LoginEmailActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".home.HomeActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".login.OTPActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
@@ -46,10 +58,19 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".task.AfterTaskCompleteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".task.TaskCompleteActivity"
+            android:screenOrientation="portrait" />
+
         <receiver
             android:name=".reciver.ConnectivityReceiver"
             android:enabled="true"
             android:exported="true" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
