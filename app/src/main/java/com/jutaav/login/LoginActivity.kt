@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.baseandroid.BaseActivity
@@ -24,8 +25,17 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
         if (binding.etMobileNumber.text.toString().isEmpty()) {
             showShortToast(getString(R.string.error_login1))
         } else {
-            val intent = Intent(this@LoginActivity, OTPActivity::class.java)
-            startActivity(intent)
+            OTPActivity.startActivity(this)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, LoginActivity::class.java)
         }
     }
 }

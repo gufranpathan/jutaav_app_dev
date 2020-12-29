@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.baseandroid.BaseActivity
@@ -16,11 +17,7 @@ class OTPActivity : BaseActivity<ActivityLoginOtpBinding>(R.layout.activity_logi
         binding.btnProceed.setOnClickListener { checkValidation() }
 
         binding.tvLoginViaEmail.setOnClickListener {
-            try {
-                val intent = Intent(this@OTPActivity, LoginEmailActivity::class.java)
-                startActivity(intent)
-            } catch (e: Exception) {
-            }
+            LoginEmailActivity.startActivity(this)
         }
     }
 
@@ -28,8 +25,17 @@ class OTPActivity : BaseActivity<ActivityLoginOtpBinding>(R.layout.activity_logi
         if (binding.tvOTP.otp?.isEmpty() == true) {
             showShortToast(getString(R.string.error_otp1))
         } else {
-            val intent = Intent(this@OTPActivity, SignupOrganizationActivity::class.java)
-            startActivity(intent)
+            SignupOrganizationActivity.startActivity(this)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, OTPActivity::class.java)
         }
     }
 }

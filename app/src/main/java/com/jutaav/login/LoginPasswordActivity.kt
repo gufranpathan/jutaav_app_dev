@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.baseandroid.BaseActivity
@@ -15,8 +16,7 @@ class LoginPasswordActivity :
     override fun oViewInitialized() {
         binding.btnProceed.setOnClickListener { checkValidation() }
         binding.tvLoginwithmobile.setOnClickListener {
-            val intent = Intent(this@LoginPasswordActivity, LoginActivity::class.java)
-            startActivity(intent)
+            LoginActivity.startActivity(this)
         }
     }
 
@@ -24,9 +24,17 @@ class LoginPasswordActivity :
         if (binding.etPassword.text.toString().isEmpty()) {
             showShortToast(getString(R.string.error_login1))
         } else {
-            with(Intent(this@LoginPasswordActivity, SignupOrganizationActivity::class.java)) {
-                startActivity(this)
-            }
+            SignupOrganizationActivity.startActivity(this)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, LoginPasswordActivity::class.java)
         }
     }
 }

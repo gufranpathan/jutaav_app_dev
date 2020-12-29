@@ -28,19 +28,17 @@ class AddNewContactFragment :
 
         setDateTimeField()
 
-        binding.tvDateOfBirth.setOnTouchListener(OnTouchListener { v, event ->
+        binding.tvDateOfBirth.setOnTouchListener(OnTouchListener { _, _ ->
             mDatePickerDialog!!.show()
             false
         })
 
         binding.mbAddNewContact.setOnClickListener {
-            val intent = Intent(requireActivity(), LoginPasswordActivity::class.java)
-            activity?.startActivity(intent)
+            LoginPasswordActivity.startActivity(requireContext())
         }
 
         binding.mbSaveChanges.setOnClickListener {
-            val intent = Intent(requireActivity(), SignupOrgNameActivity::class.java)
-            activity?.startActivity(intent)
+            SignupOrgNameActivity.startActivity(requireContext())
         }
     }
 

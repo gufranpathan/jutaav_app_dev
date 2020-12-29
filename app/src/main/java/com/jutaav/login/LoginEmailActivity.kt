@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.baseandroid.BaseActivity
@@ -25,6 +26,16 @@ class LoginEmailActivity : BaseActivity<ActivityLoginEmailBinding>(R.layout.acti
         } else {
             val intent = Intent(this@LoginEmailActivity, LoginPasswordActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, LoginEmailActivity::class.java)
         }
     }
 }

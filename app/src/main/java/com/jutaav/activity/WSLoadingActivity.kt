@@ -22,7 +22,7 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
         Timber.tag(tag()).i("${this::class.java.simpleName} Opened")
 
         GlideApp.with(this)
-            .load(R.raw.giphy6)
+            .load(R.raw.loading_gif)
             .into(binding.ivLoading)
 
         compositeDisposable.add(
@@ -40,6 +40,10 @@ class WSLoadingActivity : BaseActivity<ActivityWSLoadingBinding>(R.layout.activi
     }
 
     companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
         fun getIntent(context: Context): Intent {
             return Intent(context, WSLoadingActivity::class.java)
         }

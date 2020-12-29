@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">JUTAAV</string>
 
@@ -84,7 +85,6 @@
     <string name="str_enter_facebook_id_here">Enter Facebook Id Here</string>
     <string name="str_enter_password_here">Enter Password Here</string>
     <string name="str_enter_language_here">Enter Language Here</string>
-    <string name="str_language">Language</string>
 
     <string name="str_link_phonebook_to_jutaav_app">Link Phonebook to Jutaav App</string>
     <string name="txt_add_new_contact_title">Add New Contact</string>
@@ -107,5 +107,9 @@
     <string name="str_complete_your_profile">Complete Your Profile</string>
     <string name="str_good_job_complete_your_profile">Good job! You updated your profile! Complete these set of tasks to complete your profile.</string>
     <string name="str_state">STATE</string>
-
+    <string name="str_language">Language</string>
+    <string name="str_district">DISTRICT</string>
+    <string name="str_constituency">CONSTITUENCY</string>
+    <string name="str_booth">BOOTH</string>
+    <string name="str_update_profile">Update Profile</string>
 </resources>

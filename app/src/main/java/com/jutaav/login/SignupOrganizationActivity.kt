@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.activity.ChooseLanguageActivity
@@ -25,10 +26,17 @@ class SignupOrganizationActivity :
         ) {
             showShortToast(getString(R.string.error_org1))
         } else {
-            val intent =
-                //Intent(this@SignupOrganizationActivity, SignupOrgNameActivity::class.java)
-                Intent(this@SignupOrganizationActivity, ChooseLanguageActivity::class.java)
-            startActivity(intent)
+            ChooseLanguageActivity.startActivity(this)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, SignupOrganizationActivity::class.java)
         }
     }
 }

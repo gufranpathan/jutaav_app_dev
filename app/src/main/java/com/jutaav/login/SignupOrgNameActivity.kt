@@ -1,5 +1,6 @@
 package com.jutaav.login
 
+import android.content.Context
 import android.content.Intent
 import com.jutaav.R
 import com.jutaav.activity.WSLoadingActivity
@@ -21,8 +22,17 @@ class SignupOrgNameActivity :
         if (binding.etOrgName.text.toString().trim().isEmpty()) {
             showShortToast(getString(R.string.error_org1))
         } else {
-            val intent = Intent(this@SignupOrgNameActivity, WSLoadingActivity::class.java)
-            startActivity(intent)
+            WSLoadingActivity.startActivity(this)
+        }
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(getIntent(context))
+        }
+
+        fun getIntent(context: Context): Intent {
+            return Intent(context, SignupOrgNameActivity::class.java)
         }
     }
 }
