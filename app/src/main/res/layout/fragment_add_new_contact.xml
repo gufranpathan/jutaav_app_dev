@@ -170,7 +170,6 @@
                 android:entries="@array/array_gender"
                 android:paddingStart="@dimen/dp_5"
                 android:paddingEnd="0dp"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvGenderTitle" />
@@ -255,7 +254,6 @@
                 android:entries="@array/array_page"
                 android:paddingStart="@dimen/dp_5"
                 android:paddingEnd="0dp"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvPageTitle" />
@@ -283,7 +281,6 @@
                 android:entries="@array/array_section"
                 android:paddingStart="@dimen/dp_5"
                 android:paddingEnd="0dp"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvSectionTitle" />
@@ -311,7 +308,6 @@
                 android:entries="@array/array_booth"
                 android:paddingStart="@dimen/dp_5"
                 android:paddingEnd="0dp"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBoothTitle" />
@@ -339,7 +335,6 @@
                 android:entries="@array/array_booth_type"
                 android:paddingStart="@dimen/dp_5"
                 android:paddingEnd="0dp"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBoothTypeTitle" />

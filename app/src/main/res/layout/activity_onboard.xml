@@ -177,7 +177,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:entries="@array/array_states"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvStateTitle" />
@@ -202,7 +201,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:entries="@array/array_district"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDistrictTitle" />
@@ -227,7 +225,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:entries="@array/array_constituency"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvConstituencyTitle" />
@@ -252,7 +249,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:entries="@array/array_booth"
-                android:theme="@style/SpinnerWithShadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvBoothTitle" />
