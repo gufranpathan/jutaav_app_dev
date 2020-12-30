@@ -42,5 +42,7 @@ dependencies {
 
     implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
 
+    kapt 'com.google.dagger:dagger-compiler:2.30.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.30.1'
     kapt 'com.github.bumptech.glide:compiler:4.11.0' // Glide
 }

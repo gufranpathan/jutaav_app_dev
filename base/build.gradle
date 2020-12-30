@@ -10,7 +10,9 @@ java {
 
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     api "io.reactivex.rxjava3:rxjava:3.0.8"
+    api 'com.google.dagger:dagger:2.30.1'
 
     testApi 'junit:junit:4.+'
 }
