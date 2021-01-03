@@ -27,7 +27,7 @@
         android:id="@+id/tvUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/dp_10"
         android:fontFamily="@font/rubik_medium"
         android:includeFontPadding="false"
         android:text="Ramdev Kumar"
@@ -41,7 +41,7 @@
         android:id="@+id/tvLastMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/dp_10"
         android:fontFamily="@font/rubik"
         android:text="Hey, regarding the canvassing"
         android:textColor="@color/color_8798AD"
@@ -49,5 +49,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfilePic"
         app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

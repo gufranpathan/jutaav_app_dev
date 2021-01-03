@@ -34,7 +34,7 @@
         android:id="@+id/llEnglish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/dp_50"
         android:background="@drawable/rounded_choose_lan_btn"
         android:paddingStart="@dimen/dp_30"
         android:paddingTop="@dimen/dp_20"

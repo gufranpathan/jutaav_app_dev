@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="10dp"
+            android:padding="@dimen/dp_10"
             android:text="This is WebView, data will load here from API!"
             android:textAppearance="?attr/textAppearanceSubtitle1"
             app:layout_constraintBottom_toTopOf="@+id/btnSelectWorkSpace"

@@ -35,7 +35,6 @@
                 android:layout_gravity="center"
                 android:tint="@color/color_2547BF"
                 app:srcCompat="@drawable/ic_take_action" />
-
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
