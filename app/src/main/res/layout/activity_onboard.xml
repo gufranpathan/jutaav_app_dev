@@ -11,8 +11,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp"
+        android:paddingTop="@dimen/dp_32"
+        android:paddingBottom="@dimen/dp_32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -172,10 +172,10 @@
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinnerState"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
                 android:entries="@array/array_states"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -196,10 +196,10 @@
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinnerDistrict"
                 android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
                 android:entries="@array/array_district"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,10 +220,10 @@
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinnerConstituency"
                 android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
                 android:entries="@array/array_constituency"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -244,10 +244,10 @@
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinnerBooth"
                 android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
                 android:entries="@array/array_booth"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -373,7 +373,5 @@
             android:text="@string/txt_help_and_faq_big"
             android:textColor="@color/color_828282"
             android:textSize="@dimen/sp_8" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
