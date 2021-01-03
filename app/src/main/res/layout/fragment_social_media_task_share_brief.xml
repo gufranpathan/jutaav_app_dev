@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFFFF"
+    android:paddingStart="@dimen/dp_40"
+    android:paddingTop="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_40"
+    tools:context=".fragment.SocialMediaTaskShareBriefFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_20">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNewTaskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/txt_new_task_big"
+                android:textColor="@color/color_99000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTaskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/txt_share_website_link_to_facebook_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNewTaskTitle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_136"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/color_E0E7FF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInstructionHereTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/txt_instructions_here_title"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sivThumbnail" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInstructionHereDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati"
+                android:textColor="@color/color_8097B1"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInstructionHereTitle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPostCaptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/txt_post_caption_title"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInstructionHereDescription" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linPostCaptionMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:background="@drawable/grey_stroke_back_e5e5e5"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPostCaptionTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietPostCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:minHeight="@dimen/dp_100"
+                    android:textColorHint="@color/color_8097B1"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/rounded_corner_grey_button_c4c4c4">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCopyCaptionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:letterSpacing="0"
+                        android:text="@string/txt_copy_caption_title"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_FFFFFF"
+                        android:textSize="@dimen/sp_8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:id="@+id/relURLMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_2"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_2"
+                android:background="@drawable/rounded_blue_stroke_background_7480ff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linPostCaptionMain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietURL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/linCopyURL"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="www.bit.ly/AK84BHK"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:textColorHint="@color/color_8097B1"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linCopyURL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/rounded_unrounded_blue_background_2e5bff"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCopyURLTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0"
+                        android:text="@string/txt_copy_url_title"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_FFFFFF"
+                        android:textSize="@dimen/sp_12" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTaskExpireOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="This Task will Expire on: 20/12/2021 "
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relURLMain" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProceed"
+                style="@style/primaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:text="@string/txt_share_to_facebook_title"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaskExpireOn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

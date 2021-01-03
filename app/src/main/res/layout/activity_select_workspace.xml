@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SelectWorkSpaceActivity">
+
+    <ImageView
+        android:id="@+id/ivBrandLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splash_txt" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/onboardingSecondaryDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.09"
+        android:text="@string/str_select_your_workspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBrandLogo" />
+
+    <LinearLayout
+        android:id="@+id/llWorkPlaceA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_choose_lan_btn"
+        android:paddingStart="@dimen/dp_30"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_30"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <TextView
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_choose_lan_btn1"
+            android:fontFamily="@font/pt_serif_bold"
+            android:gravity="center"
+            android:textColor="@color/color_131E63"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/str_workplace_A"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWorkPlaceB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rounded_choose_lan_btn_blue"
+        android:paddingStart="@dimen/dp_30"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_30"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llWorkPlaceA">
+
+        <TextView
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_choose_lan_btn1"
+            android:fontFamily="@font/pt_serif"
+            android:gravity="center"
+            android:textColor="@color/color_131E63"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/str_workplace_B"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

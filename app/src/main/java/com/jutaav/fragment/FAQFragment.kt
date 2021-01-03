@@ -3,13 +3,11 @@ package com.jutaav.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.jutaav.R
-import com.jutaav.activity.CreateBroadcastListActivity
-import com.jutaav.activity.ShareToWhatsAppActivity
+import com.jutaav.activity.SelectWorkSpaceActivity
 import com.jutaav.baseandroid.BaseFragment
 import com.jutaav.databinding.FragmentFaqBinding
-import com.jutaav.task.GeneralTaskListActivity
-import com.jutaav.task.PhoneCallingTaskListActivity
 import com.wada811.viewbinding.viewBinding
 
 class FAQFragment : BaseFragment<FragmentFaqBinding>(R.layout.fragment_faq) {
@@ -19,24 +17,44 @@ class FAQFragment : BaseFragment<FragmentFaqBinding>(R.layout.fragment_faq) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnBroadcastList.setOnClickListener {
-            val intent = Intent(requireActivity(), CreateBroadcastListActivity::class.java)
+        binding.btnSelectWorkSpace.setOnClickListener {
+            val intent = Intent(requireActivity(), SelectWorkSpaceActivity::class.java)
             activity?.startActivity(intent)
         }
 
-        binding.btnShareToWhatsApp.setOnClickListener {
-            val intent = Intent(requireActivity(), ShareToWhatsAppActivity::class.java)
-            activity?.startActivity(intent)
+        binding.btnAddVolunteer.setOnClickListener {
+            replaceFragment(AddVolunteerFromPhonebookFragment())
         }
 
-        binding.btnPhoneCalling.setOnClickListener {
-            val intent = Intent(requireActivity(), PhoneCallingTaskListActivity::class.java)
-            activity?.startActivity(intent)
+        binding.btnCanvassingTasks.setOnClickListener {
+            replaceFragment(CanvassingTasksFragment())
         }
 
-        binding.btnGeneralTask.setOnClickListener {
-            val intent = Intent(requireActivity(), GeneralTaskListActivity::class.java)
-            activity?.startActivity(intent)
+        binding.btnCantFindContact.setOnClickListener {
+            replaceFragment(SearchContactFragment())
         }
+
+        binding.btnReferVolunteers.setOnClickListener {
+            replaceFragment(ReferVolunteersFragment())
+        }
+
+        binding.btnSocialMediaTaskBrief.setOnClickListener {
+            replaceFragment(SocialMediaTaskShareBriefFragment())
+        }
+
+        binding.btnAndroid68.setOnClickListener {
+            replaceFragment(WhatsAppTasksTwoFragment())
+        }
+
+        binding.btnAndroid54.setOnClickListener {
+            replaceFragment(WhatsAppTasksThreeFragment())
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.frmMain, fragment)
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
     }
 }

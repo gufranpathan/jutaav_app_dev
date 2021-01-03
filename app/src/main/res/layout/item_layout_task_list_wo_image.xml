@@ -33,8 +33,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_take_action"
-                android:tint="@color/color_2547BF" />
+                android:tint="@color/color_2547BF"
+                app:srcCompat="@drawable/ic_take_action" />
 
         </com.google.android.material.card.MaterialCardView>
 

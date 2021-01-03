@@ -2,7 +2,10 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_10"
     app:cardCornerRadius="@dimen/dp_10"
     app:cardElevation="@dimen/dp_10">
 
@@ -27,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_profile_icon"
-                android:tint="@color/color_2547BF" />
+                android:tint="@color/color_2547BF"
+                app:srcCompat="@drawable/ic_profile_icon" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -69,9 +72,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_5"
             android:paddingEnd="@dimen/dp_2"
-            app:srcCompat="@drawable/ic_more_icon"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_more_icon" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvDescription"
@@ -109,12 +113,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             android:letterSpacing="0"
             android:paddingTop="@dimen/dp_5"
             android:paddingBottom="@dimen/dp_5"
-            android:text="@string/txt_task_completed_title"
+            android:text="@string/str_share_to_facebook"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/acivThumnail" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </com.google.android.material.card.MaterialCardView>

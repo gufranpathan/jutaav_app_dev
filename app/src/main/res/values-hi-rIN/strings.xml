@@ -107,5 +107,96 @@
     <string name="str_complete_your_profile">Complete Your Profile</string>
     <string name="str_good_job_complete_your_profile">Good job! You updated your profile! Complete these set of tasks to complete your profile.</string>
     <string name="str_state">STATE</string>
+    <string name="str_district">DISTRICT</string>
+    <string name="str_constituency">CONSTITUENCY</string>
+    <string name="str_booth">BOOTH</string>
+    <string name="str_update_profile">Update Profile</string>
 
+    <string-array name="array_states">
+        <item>Select</item>
+        <item>Gujarat</item>
+        <item>Rajasthan</item>
+        <item>Tamil Nadu</item>
+    </string-array>
+
+    <string-array name="array_district">
+        <item>Select</item>
+        <item>Bharuch</item>
+        <item>Surat</item>
+        <item>Sanjali</item>
+    </string-array>
+
+    <string-array name="array_constituency">
+        <item>Select</item>
+        <item>Constituency - 1</item>
+        <item>Constituency - 2</item>
+        <item>Constituency - 3</item>
+    </string-array>
+
+    <string-array name="array_booth">
+        <item>Select</item>
+        <item>Booth - 1</item>
+        <item>Booth - 2</item>
+        <item>Booth - 3</item>
+    </string-array>
+
+    <string-array name="array_gender">
+        <item>Select</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="array_page">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="array_section">
+        <item>Select</item>
+        <item>Section - 1</item>
+        <item>Section - 2</item>
+        <item>Section - 3</item>
+    </string-array>
+
+    <string-array name="array_booth_type">
+        <item>Select</item>
+        <item>Type - 1</item>
+        <item>Type - 2</item>
+        <item>Type - 3</item>
+    </string-array>
+
+    <string name="txt_social_media_sharing_title">Social Media Sharing</string>
+    <string name="txt_tasks_due_small">5 tasks due</string>
+    <string name="txt_active_big">Active</string>
+    <string name="txt_completed_big">Completed</string>
+    <string name="txt_new_task_big">New Task</string>
+    <string name="txt_share_website_link_to_facebook_big">Share website link to Facebook</string>
+    <string name="txt_instructions_here_title">Instructions Here</string>
+    <string name="txt_post_caption_title">Post Caption</string>
+    <string name="txt_copy_caption_title">Copy Caption</string>
+    <string name="txt_copy_url_title">Copy URL</string>
+    <string name="txt_share_to_facebook_title">Share to Facebook</string>
+    <string name="txt_tasks_dummy">Social Media Sharing</string>
+    <string name="txt_tasks_count_dummy">5</string>
+    <string name="str_share_to_facebook">Share to Facebook</string>
+
+    <string name="str_search_contacts">Search Contacts</string>
+    <string name="str_search">Search</string>
+
+    <string name="txt_phonebook_caps">PHONEBOOK</string>
+    <string name="txt_invite_selected_users_title">Invite Selected Users</string>
+
+    <string name="txt_add_new_message">Add New Message</string>
+    <string name="str_select_your_workspace">SELECT YOUR WORKSPACE</string>
+    <string name="str_workplace_A">WORKPLACE A</string>
+    <string name="str_workplace_B">WORKPLACE B</string>
+    <string name="str_no_contact_found">Cant find the contact you’re looking for?</string>
+
+    <string name="txt_refer_friends_description">Refer your friends to volunteer with us! Copy this code and invite</string>
+    <string name="str_refer_link">Refer link</string>
+    <string name="txt_dummy_refer_link">bit.ly/wjkve873</string>
+    <string name="txt_invite_big">Invite</string>
+    <string name="str_copied_to_clipboard">Copied to clipboard</string>
 </resources>

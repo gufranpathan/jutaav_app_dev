@@ -1,7 +1,6 @@
 package com.jutaav.fragment
 
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -48,7 +47,7 @@ class AddNewContactFragment :
         val newCalendar: Calendar = Calendar.getInstance()
         mDatePickerDialog = DatePickerDialog(
             requireContext(),
-            OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            { view, year, monthOfYear, dayOfMonth ->
                 val newDate: Calendar = Calendar.getInstance()
                 newDate.set(year, monthOfYear, dayOfMonth)
                 val sd = SimpleDateFormat("dd-MM-yyyy")
