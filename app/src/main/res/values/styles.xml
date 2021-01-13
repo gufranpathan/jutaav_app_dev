@@ -1,14 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_FFFFFF
-        </item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-    </style>
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme" />
 
     <style name="ProThemeOrange" parent="@android:style/Theme.Holo.Dialog">
         <item name="android:windowBackground">@drawable/transparent</item>
@@ -48,7 +40,6 @@
         <item name="actionMenuTextColor">@android:color/white</item>
         <item name="android:popupMenuStyle">@color/colorPrimaryDark</item>
         <item name="contentInsetStart">0dp</item>
-        <item name="background">@drawable/toolbar_bg</item>
         <item name="android:paddingLeft">0dp</item>
     </style>
 
@@ -75,6 +66,21 @@
         <item name="colorSwitchThumbNormal">@color/color_FFFFFF</item>
         <!-- inactive track color -->
         <item name="android:colorForeground">@color/color_C4C4C4</item>
+    </style>
+
+    <style name="spinnerStyle" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
+
+    <style name="InputField" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/color_131E63</item>
+        <item name="android:fontFamily">@font/rubik</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/color_8798AD</item>
+        <item name="android:background">@drawable/edit_text_stroke_background</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
+        <item name="android:paddingBottom">@dimen/dp_10</item>
     </style>
 
     <style name="onboardingPrimaryDescriptionText" parent="Widget.MaterialComponents.TextView">
@@ -160,10 +166,103 @@
 
     <style name="primaryButton" parent="Widget.MaterialComponents.Button">
         <item name="android:textSize">@dimen/sp_15</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/color_FBFBFB</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:backgroundTint">@color/color_131E63</item>
         <item name="cornerRadius">@dimen/dp_8</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <!--New Styles-->
+
+    <style name="CustomTabLayoutText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabBackground">@drawable/selector_tab_indicator</item>
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="animationMode">slide</item>
+        <item name="tabSelectedTextColor">@color/color_131E63</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.MaterialCardView.TasksRound" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/dp_10</item>
+        <item name="cornerSizeTopRight">@dimen/dp_3</item>
+        <item name="cornerSizeBottomLeft">@dimen/dp_10</item>
+        <item name="cornerSizeBottomRight">@dimen/dp_3</item>
+    </style>
+
+    <style name="MyTasksTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/color_313131</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="MyTasksDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/color_9B9B9B</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="primaryButtonOther" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:backgroundTint">@color/color_131E63</item>
+        <item name="cornerRadius">@dimen/dp_4</item>
+    </style>
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_FBFBFB</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="chipBackgroundColor">@color/color_405EC7</item>
+        <item name="chipCornerRadius">@dimen/dp_24</item>
+        <item name="chipEndPadding">@dimen/dp_12</item>
+        <item name="chipStartPadding">@dimen/dp_2</item>
+        <item name="closeIcon">@drawable/ic_cross</item>
+        <item name="closeIconSize">@dimen/dp_8</item>
+        <item name="closeIconTint">@color/color_FBFBFB</item>
+        <item name="textEndPadding">@dimen/dp_7</item>
+    </style>
+
+    <style name="ReferFriendsDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/color_000000</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="ReferFriendsInviteLinkField" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/color_343C44</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/color_979797</item>
+        <item name="android:background">@drawable/rounded_stroke_343c44_editext</item>
+        <item name="android:paddingTop">@dimen/dp_8</item>
+        <item name="android:paddingBottom">@dimen/dp_8</item>
+    </style>
+
+    <style name="ReferInviteButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:backgroundTint">@color/color_131E63</item>
+        <item name="cornerRadius">@dimen/dp_5</item>
     </style>
 </resources>

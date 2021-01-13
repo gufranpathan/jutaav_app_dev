@@ -14,41 +14,32 @@
         <activity
             android:name=".activity.ChooseLanguageActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".activity.WSLoadingActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.SignupOrgNameActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.SignupOrganizationActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginPasswordActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginEmailActivity"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".home.HomeActivity"
-            android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".login.OTPActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.HomeActivity"
             android:screenOrientation="portrait">
 
             <intent-filter>
@@ -59,9 +50,22 @@
         </activity>
 
         <activity
-            android:name=".task.AfterTaskCompleteActivity"
+            android:name=".activity.SelectWorkSpaceActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.OnboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CreateBroadcastListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShareToWhatsAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".task.AfterTaskCompleteActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".task.TaskCompleteActivity"
             android:screenOrientation="portrait" />
@@ -75,5 +79,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_FFFFFF"
     tools:context=".login.LoginActivity">
-    
+
     <ImageView
         android:id="@+id/ivBrandLogo"
         android:layout_width="0dp"

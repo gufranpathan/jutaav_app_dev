@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.AddNewContactFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingEnd="@dimen/dp_20">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAddNewContactTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="@string/txt_add_new_contact_title"
+                android:textAllCaps="true"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/signup_orgazinattion7"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddNewContactTitle" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:hint="@string/txt_first_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
+
+            <EditText
+                android:id="@+id/etMiddleName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:gravity="center"
+                android:hint="@string/txt_middle_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintEnd_toStartOf="@+id/etLastName"
+                app:layout_constraintStart_toEndOf="@+id/etFirstName"
+                app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:hint="@string/txt_last_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
+
+            <TextView
+                android:id="@+id/tvGuardianNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_guardian_s_name_title"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+            <EditText
+                android:id="@+id/etGuardianFirstName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:hint="@string/txt_first_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
+
+            <EditText
+                android:id="@+id/etGuardianMiddleName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:gravity="center"
+                android:hint="@string/txt_middle_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintEnd_toStartOf="@+id/etGuardianLastName"
+                app:layout_constraintStart_toEndOf="@+id/etGuardianFirstName"
+                app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
+
+            <EditText
+                android:id="@+id/etGuardianLastName"
+                style="@style/InputField"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:hint="@string/txt_last_big"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGuardianNameTitle" />
+
+            <TextView
+                android:id="@+id/tvGenderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_gender_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etGuardianFirstName" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_gender"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGenderTitle" />
+
+            <TextView
+                android:id="@+id/tvDateOfBirthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_date_of_birth_title"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
+
+            <TextView
+                android:id="@+id/tvDateOfBirth"
+                style="@style/InputField"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:hint="@string/txt_date_of_birth_dummy"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingTop="0dp"
+                android:paddingEnd="@dimen/dp_23"
+                android:paddingBottom="0dp"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDateOfBirthTitle" />
+
+            <TextView
+                android:id="@+id/tvRelationWithGuardianTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_relation_with_guardian_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateOfBirth" />
+
+            <EditText
+                android:id="@+id/etRelationWithGuardian"
+                style="@style/InputField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:hint="@string/txt_brother_big"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRelationWithGuardianTitle" />
+
+            <TextView
+                android:id="@+id/tvPageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_page_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRelationWithGuardian" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerPageTitle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_page"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPageTitle" />
+
+            <TextView
+                android:id="@+id/tvSectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_section_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPageTitle" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerSection"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_section"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSectionTitle" />
+
+            <TextView
+                android:id="@+id/tvBoothTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_booth_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSection" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerBooth"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_booth"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBoothTitle" />
+
+            <TextView
+                android:id="@+id/tvBoothTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:fontFamily="@font/rubik"
+                android:includeFontPadding="false"
+                android:text="@string/txt_booth_type_big"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerBooth" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerBoothType"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/background_stroke_spinner"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/array_booth_type"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBoothTypeTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbAddNewContact"
+                style="@style/primaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:letterSpacing="0"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/txt_add_new_contact_title"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerBoothType" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbSaveChanges"
+                style="@style/secondaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_45"
+                android:letterSpacing="0"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/txt_save_changes_title"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mbAddNewContact" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
