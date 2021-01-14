@@ -108,7 +108,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOrganisationCodeTitle"
         app:length="6"
-        app:otp_box_background="@drawable/rounded_edittext"
+        app:otp_box_background="@drawable/background_rounded_edittext"
         app:otp_text_size="@dimen/sp_24"
         app:width="@dimen/dp_40" />
 

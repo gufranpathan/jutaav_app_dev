@@ -8,7 +8,7 @@
     android:background="@color/color_FFFFFF"
     tools:context=".SplashActivity">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivJutaavLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/splash_txt" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@null"
@@ -26,5 +26,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivJutaavLogo"
-        app:srcCompat="@drawable/splash_bg1" />
+        app:srcCompat="@drawable/splash_bg" />
 </androidx.constraintlayout.widget.ConstraintLayout>
